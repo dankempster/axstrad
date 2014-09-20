@@ -1,0 +1,45 @@
+{
+    "name": "axstrad/iterator",
+    "description": "Common iterators",
+    "type": "library",
+    "keywords": ["axstrad", "common", "iterator", "csv", "file"],
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Dan Kempster",
+            "email": "dev@dankempster.co.uk",
+            "homepage": "http://www.dankempster.co.uk",
+            "role": "Developer"
+        }
+    ],
+
+    "support": {
+        "issues": "https://github.com/dankempster/axstrad-iterator/issues",
+        "source": "https://github.com/dankempster/axstrad-iterator"
+    },
+
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://satis.defiant"
+        }
+    ],
+
+    "require": {
+        "php": ">=5.2.2",
+        "axstrad/common": "dev-develop"
+    },
+
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+
+    "autoload": {
+        "psr-0": {
+            "Axstrad\\Iterator": "src/",
+            "Axstrad\\Test\\Iterator": "tests/"
+        }
+    },
+
+    "minimum-stability": "dev"
+}
