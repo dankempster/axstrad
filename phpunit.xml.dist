@@ -8,6 +8,9 @@
          verbose="false">
 
     <testsuites>
+        <testsuite name="Axstrad/BrowserSyncBundle">
+            <directory suffix="Test.php">./src/Axstrad/Bundle/BrowserSyncBundle/Tests</directory>
+        </testsuite>
     </testsuites>
 
     <!-- <logging>
@@ -28,6 +31,7 @@
         <whitelist addUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./src</directory>
             <exclude>
+                <directory>./src/Axstrad/Bundle/*/Tests</directory>
                 <directory>./vendor</directory>
             </exclude>
         </whitelist>
