@@ -11,6 +11,10 @@
         <testsuite name="Axstrad\Test">
             <file>./src/Axstrad/Component/Test/MockedIteratorTest.php</file>
         </testsuite>
+
+        <testsuite name="Axstrad Library">
+            <directory suffix="Test.php">./src/Axstrad/*/Tests/</directory>
+        </testsuite>
     </testsuites>
 
     <logging>
@@ -32,6 +36,7 @@
             <directory suffix=".php">./src</directory>
             <exclude>
                 <directory>./vendor</directory>
+                <directory>./src/Axstrad/*/Tests</directory>
                 <directory>./src/Axstrad/Component/Test/Example</directory>
             </exclude>
         </whitelist>
