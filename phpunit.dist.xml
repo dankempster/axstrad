@@ -15,6 +15,10 @@
         <testsuite name="Axstrad Library">
             <directory suffix="Test.php">./src/Axstrad/*/Tests/</directory>
         </testsuite>
+
+        <testsuite name="Axstrad\TestBundle">
+            <file>./src/Axstrad/Bundle/TestBundle/Functional/WebTestCase.php</file>
+        </testsuite>
     </testsuites>
 
     <logging>
