@@ -19,6 +19,11 @@
         <testsuite name="Axstrad\TestBundle">
             <file>./src/Axstrad/Bundle/TestBundle/Functional/WebTestCase.php</file>
         </testsuite>
+
+        <testsuite name="Axstrad\OrmRepositoryFactoryBundle">
+            <file>./src/Axstrad/Bundle/OrmRepositoryFactoryBundle/Tests/Functional/ServicesExistTest.php</file>
+            <file>./src/Axstrad/Bundle/OrmRepositoryFactoryBundle/Tests/Functional/RepositoriesAreCreatedByContainerTest.php</file>
+        </testsuite>
     </testsuites>
 
     <logging>
