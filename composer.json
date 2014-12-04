@@ -24,6 +24,10 @@
         }
     },
 
+    "provide": {
+        "axstrad/browser-sync-bundle": "self.version"
+    },
+
     "archive": {
         "exclude": [
             "!vendor",
