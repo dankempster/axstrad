@@ -2,20 +2,20 @@
 namespace Axstrad\Component\Iterator;
 
 use Axstrad\Component\Iterator\Exception\InvalidArgumentException;
-use Iterator;
-// use SeekableIterator;
+use SeekableIterator;
 use SplObjectStorage;
 
 
 /**
+ * Axstrad\Component\Iterator\SplObjectStorageIterator
+ *
  * An iterator to iterate SplObjectStorage objects with the ability to decide
  * how data is extract and present during iteratrion.
  *
  * @author Dan Kempster <dev@dankempster.co.uk>
  */
 class SplObjectStorageIterator implements
-    // SeekableIterator,
-    Iterator
+    SeekableIterator
 {
     const KEY_INDEX = 1;
     const KEY_INFO = 2;
@@ -145,5 +145,26 @@ class SplObjectStorageIterator implements
     public function getInfo()
     {
         return $this->storage->getInfo();
+    }
+
+    /**
+     * Seeks to a position
+     *
+     * Seeks to a given position in the iterator.
+     *
+     * @param integer|object $position
+     * @return void
+     */
+    public function seek($position)
+    {
+        $this->rewind();
+        while ($this->valid()) {
+            if ((is_numeric($position) && $this->key() == $position) ||
+                ($this->current() === $position)
+            ) {
+                break;
+            }
+            $this->next();
+        }
     }
 }
