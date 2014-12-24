@@ -42,6 +42,10 @@
             <directory suffix="Test.php">./src/Axstrad/Component/Iterator/Tests/</directory>
         </testsuite>
 
+        <testsuite name="Axstrad\Collection">
+            <directory suffix="Test.php">./src/Axstrad/Component/Collection/Tests/</directory>
+        </testsuite>
+
         <testsuite name="Axstrad\Filesystem">
             <directory suffix="Test.php">./src/Axstrad/Component/Filesystem/Tests/</directory>
         </testsuite>

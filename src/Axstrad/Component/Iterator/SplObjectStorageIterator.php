@@ -4,6 +4,7 @@ namespace Axstrad\Component\Iterator;
 use Axstrad\Component\Iterator\Exception\InvalidArgumentException;
 use SeekableIterator;
 use SplObjectStorage;
+use OutOfBoundsException;
 
 
 /**
@@ -154,6 +155,7 @@ class SplObjectStorageIterator implements
      *
      * @param integer|object $position
      * @return void
+     * @throws OutOfBoundsException If $position is invalid
      */
     public function seek($position)
     {
@@ -162,9 +164,12 @@ class SplObjectStorageIterator implements
             if ((is_numeric($position) && $this->key() == $position) ||
                 ($this->current() === $position)
             ) {
-                break;
+                return;
             }
             $this->next();
         }
+        throw new OutOfBoundsException(
+            "Position '{$position}' is invalid"
+        );
     }
 }

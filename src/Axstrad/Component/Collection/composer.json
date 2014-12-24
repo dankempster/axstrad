@@ -1,0 +1,32 @@
+{
+    "name": "axstrad/iterator",
+    "description": "A collection of iterators",
+    "type": "component",
+    "keywords": ["collection", "object", "splobjectstorage"],
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Dan Kempster",
+            "email": "dev@dankempster.co.uk",
+            "role": "Developer"
+        }
+    ],
+
+    "require": {
+        "php": ">=5.4",
+        "axstrad/itertator": "dev-develop",
+        "doctrine/common-collections": "~2.0"
+    },
+
+    "autoload": {
+        "psr-0": {
+            "Axstrad\\Component\\Iterator": ""
+        }
+    },
+
+    "minimum-stability": "dev",
+
+    "archive": {
+        "exclude": ["!vendor", "Tests", "phpunit.xml*"]
+    }
+}
