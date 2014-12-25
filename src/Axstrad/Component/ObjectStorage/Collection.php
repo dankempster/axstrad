@@ -1,7 +1,11 @@
 <?php
 namespace Axstrad\Component\ObjectStorage;
 
-use Closure, Countable, IteratorAggregate, ArrayAccess;
+use ArrayAccess;
+use Closure;
+use Countable;
+use Doctrine\Common\Collections\Selectable;
+use IteratorAggregate;
 
 /**
  * An SplObjectStorage decorator for an ObjectCollection.
@@ -119,7 +123,11 @@ use Closure, Countable, IteratorAggregate, ArrayAccess;
  *
  * @author Dan Kempster <me@dankempster.co.uk>
  */
-interface ObjectCollectionInterface extends Countable, Iterator, ArrayAccess
+interface ObjectCollectionInterface extends
+    ArrayAccess,
+    Countable,
+    Iterator,
+    Selectable
 {
     CONST EXTRACT_OBJECT = 1;
     CONST EXTRACT_INFO = 2;
