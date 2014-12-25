@@ -28,8 +28,12 @@ use SplObjectStorage;
  *
  * @author Dan Kempster <dev@dankempster.co.uk>
  */
-class ObjectCollection implements Collection, Selectable
+class ObjectCollection implements
+    Collection
 {
+    use Traits\ExtractableTrait;
+
+
     /**
      * An array containing the entries of this collection.
      *

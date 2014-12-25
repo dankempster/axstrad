@@ -126,14 +126,10 @@ use IteratorAggregate;
 interface ObjectCollectionInterface extends
     ArrayAccess,
     Countable,
+    Extractable,
     Iterator,
     Selectable
 {
-    CONST EXTRACT_OBJECT = 1;
-    CONST EXTRACT_INFO = 2;
-    CONST EXTRACT_BOTH = 3;
-    CONST EXTRACT_ENTRY = 4;
-
     /**
      * Adds an element at the end of the collection.
      *

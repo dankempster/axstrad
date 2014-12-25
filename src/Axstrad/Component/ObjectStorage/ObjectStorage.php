@@ -29,6 +29,9 @@ use SplObjectStorage;
 class ObjectStorage extends SplObjectStorage implements
     Collection
 {
+    use Traits\ExtractableTrait;
+
+
     /**
      * Gets a native PHP array representation of the collection.
      *

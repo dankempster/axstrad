@@ -16,15 +16,10 @@ use OutOfBoundsException;
  * @author Dan Kempster <dev@dankempster.co.uk>
  */
 class Iterator implements
+    Extractable,
     SeekableIterator
 {
-    const KEY_INDEX = 1;
-    const KEY_INFO = 2;
-    const KEY_OBJECT = 3;
-
-    const VALUE_OBJECT = 1;
-    const VALUE_INFO = 2;
-    const VALUE_BOTH = 3;
+    use Traits\ExtractableTrait;
 
 
     /**
@@ -34,52 +29,17 @@ class Iterator implements
      */
     private $storage;
 
-    /**
-     * @var integer
-     */
-    private $valueFlags;
-
 
     /**
      * Initializes a new ArrayCollection.
      *
      * @param SplObjectStorage $storage
      */
-    public function __construct(SplObjectStorage $storage, $valueFlags = self::VALUE_OBJECT)
+    public function __construct(SplObjectStorage $storage, $extractFlags = self::EXTR_ENTRY)
     {
         $this->storage = new SplObjectStorage;
         $this->storage->addAll($storage);
-        $this->setValueFlags($valueFlags);
-    }
-
-    /**
-     * Get valueFlags
-     *
-     * @return integer
-     * @see setValueFlags
-     */
-    public function getValueFlags()
-    {
-        return $this->valueFlags;
-    }
-
-    /**
-     * Set valueFlags
-     *
-     * @param  integer $valueFlags
-     * @return self
-     * @throws InvalidArgumentException If $valueFlags is not numeric
-     * @see getValueFlags
-     */
-    public function setValueFlags($valueFlags)
-    {
-        if (!is_numeric($valueFlags)) {
-            throw InvalidArgumentException::create("integer", $valueFlags);
-        }
-
-        $this->valueFlags = (integer) $valueFlags;
-
-        return $this;
+        $this->setValueFlags($extractFlags);
     }
 
     /**
