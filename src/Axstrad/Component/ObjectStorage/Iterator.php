@@ -8,14 +8,14 @@ use OutOfBoundsException;
 
 
 /**
- * Axstrad\Component\Iterator\SplObjectStorageIterator
+ * Axstrad\Component\Iterator\Iterator
  *
  * An iterator to iterate SplObjectStorage objects with the ability to decide
  * how data is extract and present during iteratrion.
  *
  * @author Dan Kempster <dev@dankempster.co.uk>
  */
-class SplObjectStorageIterator implements
+class Iterator implements
     SeekableIterator
 {
     const KEY_INDEX = 1;

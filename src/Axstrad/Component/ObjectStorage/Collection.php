@@ -1,5 +1,5 @@
 <?php
-namespace Axstrad\Component\Collection;
+namespace Axstrad\Component\ObjectStorage;
 
 use Closure, Countable, IteratorAggregate, ArrayAccess;
 

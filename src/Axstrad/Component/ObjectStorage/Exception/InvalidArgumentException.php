@@ -1,11 +1,11 @@
 <?php
-namespace Axstrad\Component\Collection\Exception;
+namespace Axstrad\Component\ObjectStorage\Exception;
 
 use Axstrad\Common\Exception\InvalidArgumentException as BaseException;
 
 
 /**
- * Axstrad\Component\Collection\Exception\InvalidArgumentException
+ * Axstrad\Component\ObjectStorage\Exception\InvalidArgumentException
  */
 class InvalidArgumentException extends BaseException implements
     Exception

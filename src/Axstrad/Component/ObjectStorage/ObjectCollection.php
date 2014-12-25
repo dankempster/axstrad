@@ -1,10 +1,10 @@
 <?php
-namespace Axstrad\Component\Collection;
+namespace Axstrad\Component\ObjectStorage;
 
 
 use ArrayIterator;
 use Axstrad\Common\Util\Debug;
-use Axstrad\Component\Collection\Exception\InvalidArgumentException;
+use Axstrad\Component\ObjectStorage\Exception\InvalidArgumentException;
 use Axstrad\Component\Iterator\SplObjectStorageIterator;
 use Closure;
 use Doctrine\Common\Collections\Collection;
@@ -16,7 +16,7 @@ use SplObjectStorage;
 
 
 /**
- * Axstrad\Component\Collection\ObjectCollection
+ * Axstrad\Component\ObjectStorage\ObjectCollection
  *
  * An ObjectCollection is a Collection implementation that wraps an SplObjectStorage instance.
  *

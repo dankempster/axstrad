@@ -1,7 +1,7 @@
 <?php
-namespace Axstrad\Component\Collection\Tests;
+namespace Axstrad\Component\ObjectStorage\Tests;
 
-use Axstrad\Component\Collection\ObjectCollection;
+use Axstrad\Component\ObjectStorage\ObjectCollection;
 use Axstrad\Component\Test\TestCase;
 use DateTime;
 use StdClass;
@@ -31,7 +31,7 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::offsetExists
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::offsetExists
      */
     public function testOffsetExists1()
     {
@@ -41,7 +41,7 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::offsetExists
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::offsetExists
      */
     public function testOffsetExists2()
     {
@@ -51,7 +51,7 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::toArray
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::toArray
      */
     public function testToArray()
     {
@@ -75,7 +75,7 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::last
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::last
      */
     public function testLastMethod()
     {
@@ -86,8 +86,8 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::first
-     * @uses Axstrad\Component\Collection\ObjectCollection::last
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::first
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::last
      */
     public function testFirstMethod()
     {
@@ -99,8 +99,8 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::key
-     * @uses Axstrad\Component\Collection\ObjectCollection::first
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::key
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::first
      */
     public function testKeyMethod1()
     {
@@ -111,8 +111,8 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::key
-     * @uses Axstrad\Component\Collection\ObjectCollection::last
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::key
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::last
      */
     public function testKeyMethod2()
     {
@@ -124,8 +124,8 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::current
-     * @uses Axstrad\Component\Collection\ObjectCollection::first
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::current
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::first
      */
     public function testCurrentMethod1()
     {
@@ -137,9 +137,9 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::current
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::current
      * @depends testLastMethod
-     * @uses Axstrad\Component\Collection\ObjectCollection::last
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::last
      */
     public function testCurrentMethod2()
     {
@@ -151,9 +151,9 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::next
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::next
      * @depends testFirstMethod
-     * @uses Axstrad\Component\Collection\ObjectCollection::first
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::first
      */
     public function testNextMethod1()
     {
@@ -165,9 +165,9 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::next
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::next
      * @depends testLastMethod
-     * @uses Axstrad\Component\Collection\ObjectCollection::last
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::last
      */
     public function testNextMethod2()
     {
@@ -178,11 +178,11 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::removeObject
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::removeObject
      * @depends testOffsetExists1
      * @depends testOffsetExists2
-     * @uses Axstrad\Component\Collection\ObjectCollection::offsetExists
-     * @uses Axstrad\Component\Collection\ObjectCollection::removeElement
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::offsetExists
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::removeElement
      */
     public function testRemoveObject()
     {
@@ -193,10 +193,10 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::removeElement
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::removeElement
      * @depends testRemoveObject
-     * @uses Axstrad\Component\Collection\ObjectCollection::offsetExists
-     * @uses Axstrad\Component\Collection\ObjectCollection::removeObject
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::offsetExists
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::removeObject
      */
     public function testRemoveElementReturnsTrueWhenObjectNotExist()
     {
@@ -206,10 +206,10 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::removeElement
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::removeElement
      * @depends testRemoveObject
-     * @uses Axstrad\Component\Collection\ObjectCollection::offsetExists
-     * @uses Axstrad\Component\Collection\ObjectCollection::removeObject
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::offsetExists
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::removeObject
      */
     public function testRemoveElementReturnsFalseWhenObjectNotExist()
     {
@@ -219,8 +219,8 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::removeElement
-     * @expectedException Axstrad\Component\Collection\Exception\InvalidArgumentException
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::removeElement
+     * @expectedException Axstrad\Component\ObjectStorage\Exception\InvalidArgumentException
      */
     public function testRemoveElementThrowsException()
     {
@@ -228,7 +228,7 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::getInfo
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::getInfo
      */
     public function testGetInfoMethod()
     {
@@ -239,7 +239,7 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::getInfo
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::getInfo
      * @depends testGetInfoMethod
      */
     public function testGetInfoMethodWithObject()
@@ -251,7 +251,7 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::getInfo
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::getInfo
      * @dataProvider getInfoMethodReturnsNullWhenNotFoundDataProvider
      * @dependa testGetInfoMethodWithObject
      */
@@ -273,7 +273,7 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::count
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::count
      */
     public function testCountMethod()
     {
@@ -284,7 +284,7 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::offsetGet
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::offsetGet
      */
     public function testOffsetGet()
     {
@@ -295,7 +295,7 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::offsetUnset
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::offsetUnset
      * @depends testOffsetExists1
      * @depends testOffsetExists2
      */
@@ -308,13 +308,13 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::offsetSet
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::offsetSet
      * @dataProvider attachDataProvider
      * @depends testOffsetGet
      * @depends testOffsetExists1
      * @depends testOffsetExists2
-     * @uses Axstrad\Component\Collection\ObjectCollection::offsetExists
-     * @uses Axstrad\Component\Collection\ObjectCollection::offsetGet
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::offsetExists
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::offsetGet
      */
     public function testOffsetSet($object, $info)
     {
@@ -335,13 +335,13 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::add
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::add
      * @dataProvider attachDataProvider
      * @depends testOffsetGet
      * @depends testOffsetSet
-     * @uses Axstrad\Component\Collection\ObjectCollection::offsetExists
-     * @uses Axstrad\Component\Collection\ObjectCollection::offsetGet
-     * @uses Axstrad\Component\Collection\ObjectCollection::offsetSet
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::offsetExists
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::offsetGet
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::offsetSet
      */
     public function testAddMethod($object, $info)
     {
@@ -361,13 +361,13 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::set
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::set
      * @dataProvider attachDataProvider
      * @depends testOffsetGet
      * @depends testOffsetSet
-     * @uses Axstrad\Component\Collection\ObjectCollection::offsetExists
-     * @uses Axstrad\Component\Collection\ObjectCollection::offsetGet
-     * @uses Axstrad\Component\Collection\ObjectCollection::offsetSet
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::offsetExists
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::offsetGet
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::offsetSet
      */
     public function testSetMethod($object, $info)
     {
@@ -395,7 +395,7 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::getIterator
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::getIterator
      */
     public function testGetIterator()
     {
@@ -406,10 +406,10 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::get
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::get
      * @dataProvider getMethodDataProvider
      * @depends testAddMethod
-     * @uses Axstrad\Component\Collection\ObjectCollection::add
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::add
      */
     public function testGet($populate, $lookup, $expected)
     {
@@ -434,9 +434,9 @@ class ObjectCollectionTests extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\Collection\ObjectCollection::getKeys()
+     * @covers Axstrad\Component\ObjectStorage\ObjectCollection::getKeys()
      * @depends testGetIterator
-     * @uses Axstrad\Component\Collection\ObjectCollection::getIterator()
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::getIterator()
      */
     public function testGetKeys()
     {
@@ -457,10 +457,10 @@ class ObjectCollectionTests extends TestCase
      * @depends testNextMethod1
      * @depends testNextMethod2
      * @depends testGetInfoMethodWithObject
-     * @uses Axstrad\Component\Collection\ObjectCollection::first
-     * @uses Axstrad\Component\Collection\ObjectCollection::getInfo
-     * @uses Axstrad\Component\Collection\ObjectCollection::current
-     * @uses Axstrad\Component\Collection\ObjectCollection::next
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::first
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::getInfo
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::current
+     * @uses Axstrad\Component\ObjectStorage\ObjectCollection::next
      */
     public function testIteratorContainsContentsAsStorage()
     {
