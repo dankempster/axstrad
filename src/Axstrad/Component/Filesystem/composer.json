@@ -1,0 +1,30 @@
+{
+    "name": "axstrad/filesystem",
+    "description": "A filesystem component with support for other Axstrad interfaces.",
+    "type": "component",
+    "keywords": ["filesystem", "axstrad"],
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Dan Kempster",
+            "email": "dev@dankempster.co.uk",
+            "role": "Developer"
+        }
+    ],
+
+    "require": {
+        "php": ">=5.4"
+    },
+
+    "autoload": {
+        "psr-0": {
+            "Axstrad\\Component\\Filesystem": ""
+        }
+    },
+
+    "minimum-stability": "dev",
+
+    "archive": {
+        "exclude": ["!vendor", "Tests", "phpunit.xml*"]
+    }
+}

@@ -42,6 +42,10 @@
             <file>./src/Axstrad/Common/Tests/Traits/NullableTitleTraitTest.php</file>
         </testsuite>
 
+        <testsuite name="Axstrad\Filesystem">
+            <directory suffix="Test.php">./src/Axstrad/Component/Filesystem/Tests/</directory>
+        </testsuite>
+
         <testsuite name="Axstrad\OptionsResolver">
             <directory suffix="Test.php">./src/Axstrad/Component/OptionsResolver/Tests/</directory>
         </testsuite>
