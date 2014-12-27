@@ -1,11 +1,14 @@
 <?php
-namespace Axstrad\Component\WorkForce\Tests\Worker;
+namespace Axstrad\SymfonyBridge\WorkForce\Tests\Unit\Worker;
 
 use Axstrad\Component\Test\TestCase;
-use Axstrad\Component\WorkForce\Worker\DispatchDynamicEvent;
+use Axstrad\SymfonyBridge\WorkForce\Worker\DispatchDynamicEvent;
 use Symfony\Component\EventDispatcher\GenericEvent;
 
 
+/**
+ * @uses Axstrad\SymfonyBridge\WorkForce\Worker\DispatchDynamicEvent::__construct
+ */
 class DispatchDynamicEventTest extends TestCase
 {
     protected $mockEventDispatcher;
@@ -42,7 +45,7 @@ class DispatchDynamicEventTest extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\WorkForce\Worker\DispatchDynamicEvent::__construct
+     * @covers Axstrad\SymfonyBridge\WorkForce\Worker\DispatchDynamicEvent::__construct
      */
     public function testEventDispatcherIsSet()
     {
@@ -53,7 +56,7 @@ class DispatchDynamicEventTest extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\WorkForce\Worker\DispatchDynamicEvent::__construct
+     * @covers Axstrad\SymfonyBridge\WorkForce\Worker\DispatchDynamicEvent::__construct
      */
     public function testEventTypeResolverIsSet()
     {
@@ -64,7 +67,7 @@ class DispatchDynamicEventTest extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\WorkForce\Worker\DispatchDynamicEvent::canWork
+     * @covers Axstrad\SymfonyBridge\WorkForce\Worker\DispatchDynamicEvent::canWork
      */
     public function testCanWorkIsProxiedToWorker()
     {
@@ -81,7 +84,7 @@ class DispatchDynamicEventTest extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\WorkForce\Worker\DispatchDynamicEvent::work
+     * @covers Axstrad\SymfonyBridge\WorkForce\Worker\DispatchDynamicEvent::work
      */
     public function testWorkerIsUsedToResolveTheEventType()
     {
@@ -98,7 +101,7 @@ class DispatchDynamicEventTest extends TestCase
     }
 
     /**
-     * @covers Axstrad\Component\WorkForce\Worker\DispatchDynamicEvent::work
+     * @covers Axstrad\SymfonyBridge\WorkForce\Worker\DispatchDynamicEvent::work
      */
     public function testEventIsDispatched()
     {

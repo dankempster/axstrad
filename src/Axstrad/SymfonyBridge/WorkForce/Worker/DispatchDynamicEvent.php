@@ -1,5 +1,5 @@
 <?php
-namespace Axstrad\Component\WorkForce\Worker;
+namespace Axstrad\SymfonyBridge\WorkForce\Worker;
 
 use Axstrad\Component\WorkForce\Worker;
 use Axstrad\Component\WorkForce\WorkerDependantTrait;
@@ -8,7 +8,7 @@ use Symfony\Component\EventDispatcher\EventDispatcher;
 
 
 /**
- * Axstrad\Component\WorkForce\Worker\DispatchDynamicEvent
+ * Axstrad\SymfonyBridge\WorkForce\Worker\DispatchDynamicEvent
  *
  * Uses another Worker to resolve which event type to dispatch for the task.
  * Then this worker dispatches that event.

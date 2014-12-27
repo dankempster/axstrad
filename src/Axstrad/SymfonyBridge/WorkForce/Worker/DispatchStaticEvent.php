@@ -1,13 +1,14 @@
 <?php
-namespace Axstrad\Component\WorkForce\Worker;
+namespace Axstrad\SymfonyBridge\WorkForce\Worker;
 
 use Axstrad\Component\WorkForce\Worker;
+use Axstrad\Component\WorkForce\Worker\WorksAnythingTrait;
 use Axstrad\Symfony\EventDispatcher\EventDispatcherAwareTrait;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 
 
 /**
- * Axstrad\Component\WorkForce\Worker\DispatchStaticEvent
+ * Axstrad\SymfonyBridge\WorkForce\Worker\DispatchStaticEvent
  *
  * Dispatches the same event type for all tasks regardless.
  */

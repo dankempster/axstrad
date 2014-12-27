@@ -46,6 +46,10 @@
             <directory suffix="Test.php">./src/Axstrad/Component/WorkForce/Tests</directory>
         </testsuite>
 
+        <testsuite name="Axstrad\SymfonyBridge\WorkForce">
+            <directory suffix="Test.php">./src/Axstrad/SymfonyBridge/WorkForce/Tests</directory>
+        </testsuite>
+
         <testsuite name="Axstrad\Filesystem">
             <directory suffix="Test.php">./src/Axstrad/Component/Filesystem/Tests/</directory>
         </testsuite>
@@ -117,6 +121,7 @@
                 <directory>./src/Axstrad/Bundle/*/Tests</directory>
                 <directory>./src/Axstrad/Component/*/Tests</directory>
                 <directory>./src/Axstrad/Component/Test/Example</directory>
+                <directory>./src/Axstrad/SymfonyBridge/*/Tests</directory>
                 <directory>./vendor</directory>
             </exclude>
         </whitelist>
