@@ -17,8 +17,8 @@ filter:
         - src/Axstrad/Bundle/TestBundle/Functional/WebTestCase.php
 tools:
     external_code_coverage:
-        timeout: 1800
-        runs: 5
+        timeout: 1200
+        runs: 3
     php_changetracking: true
     php_mess_detector: true
     php_code_sniffer:
