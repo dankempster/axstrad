@@ -14,7 +14,7 @@ namespace Axstrad\DoctrineExtensions\Activatable\Mapping;
 
 use Doctrine\Common\Persistence\Mapping\ClassMetadata;
 use Gedmo\Exception\InvalidMappingException;
-use Doctrine\ORM\Mapping\ClassMetadataInfo as OrmClassMetadat;
+use Doctrine\ORM\Mapping\ClassMetadataInfo as OrmClassMetadata;
 
 /**
  * Axstrad\DoctrineExtensions\Activatable\Mapping\Validator
