@@ -40,7 +40,7 @@ class ActivatableListener extends MappedEventSubscriber
      */
     public function loadClassMetadata(EventArgs $eventArgs)
     {
-        if ($eventArgs instanceof LoadClassMetadataEventArgs) {
+        if (!$eventArgs instanceof LoadClassMetadataEventArgs) {
             throw InvalidArgumentException::create(
                 'Doctrine\Common\Persistence\Event\LoadClassMetadataEventArgs',
                 $eventArgs
