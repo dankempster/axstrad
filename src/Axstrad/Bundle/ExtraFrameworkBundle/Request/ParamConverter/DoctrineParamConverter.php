@@ -74,10 +74,10 @@ class DoctrineParamConverter extends SensioDoctrineParamConverter
      * If <em>configuration</em>->getClass() matches /%(.*)%/ then it is interpreted as a DI container parameter; And
      * the DI container is asked for a parameter value using $1 (from the regex) as the key.
      *
-     * @param ParamConverterConfig $configuration
+     * @param ConfigurationInterface $configuration
      * @return void
      */
-    protected function convertClassParamToClassName(ParamConverterConfig $configuration)
+    protected function convertClassParamToClassName(ConfigurationInterface $configuration)
     {
         if (!$configuration instanceof ParamConverterConfig) {
             return;
