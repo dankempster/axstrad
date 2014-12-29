@@ -10,17 +10,18 @@
          stopOnFailure="false"
          syntaxCheck="false"
          bootstrap="./vendor/autoload.php"
+         strict="true"
 >
     <testsuites>
-        <testsuite name="Axstrad\Component\Test">
-            <directory suffix="Test.php">./</directory>
+        <testsuite name="Axstrad/Test">
+            <file>MockedIteratorTest.php</file>
         </testsuite>
     </testsuites>
 
     <logging>
         <!-- <log type="coverage-html"
              target="./build/coverage"
-             title="Axstrad\Common"
+             title="Axstrad/Test"
              charset="UTF-8"
              yui="true"
              highlight="true"
@@ -39,9 +40,11 @@
     <filter>
         <whitelist addUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./</directory>
-            <exlclude>
+            <exclude>
+                <directory>./Example</directory>
                 <directory>./Test/Example</directory>
-            </exlclude>
+                <directory>./vendor</directory>
+            </exclude>
         </whitelist>
     </filter>
 </phpunit>

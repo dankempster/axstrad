@@ -6,12 +6,9 @@
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
- *
- * @author Dave Gardner <dave@davegardner.me.uk>
- * @package Axstrad\Component\Iterator
  */
-namespace Axstrad\Component\Test;
 
+namespace Axstrad\Component\Test;
 
 /**
  * Axstrad\Component\Test\MockedIteratorTest
@@ -20,6 +17,12 @@ namespace Axstrad\Component\Test;
  *
  * Here we have added a helper method (which you could add to your own abstract
  * base test class) that will help us mock iterators quickly and easily.
+ *
+ * @author Dave Gardner <dave@davegardner.me.uk>
+ * @author Dan Kempster <dev@dankempster.co.uk>
+ * @license http://opensource.org/licenses/MIT MIT
+ * @package Axstrad/Test
+ * @subpackage Iterator
  */
 class MockedIteratorTest extends \PHPUnit_Framework_TestCase
 {
