@@ -12,7 +12,6 @@
  */
 namespace Axstrad\DoctrineExtensions\Activatable\Filter;
 
-use Doctrine\ORM\Mapping\ClassMetaData;
 use Doctrine\ORM\Query\Filter\SQLFilter;
 use Axstrad\DoctrineExtensions\Activatable\ActivatableListener;
 

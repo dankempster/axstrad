@@ -115,6 +115,9 @@ class Debug
         return 'Array(0){}';
     }
 
+    /**
+     * @param string $path
+     */
     protected static function getOption($path)
     {
         return ArrayUtil::get($path, self::$options);
