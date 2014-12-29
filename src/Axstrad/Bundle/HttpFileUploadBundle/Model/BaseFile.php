@@ -1,7 +1,6 @@
 <?php
 namespace Axstrad\Bundle\HttpFileUploadBundle\Model;
 
-use Axstrad\Bundle\HttpFileUploadBundle\Exception\LogixException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 

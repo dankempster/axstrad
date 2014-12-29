@@ -2,7 +2,6 @@
 
 namespace Axstrad\Bundle\HttpFileUploadBundle\Tests\Functional\Form;
 
-use FrequenceWeb\Bundle\ContactBundle\Form\ContactType as BaseContactType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
