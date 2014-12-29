@@ -13,7 +13,9 @@
 namespace Axstrad\DoctrineExtensions\Activatable;
 
 use Doctrine\Common\EventArgs;
+use Doctrine\Common\Persistence\Event\LoadClassMetadataEventArgs;
 use Gedmo\Mapping\MappedEventSubscriber;
+use Axstrad\DoctrineExtensions\Exception\InvalidArgumentException;
 
 
 /**
@@ -38,6 +40,12 @@ class ActivatableListener extends MappedEventSubscriber
      */
     public function loadClassMetadata(EventArgs $eventArgs)
     {
+        if ($eventArgs instanceof LoadClassMetadataEventArgs) {
+            throw InvalidArgumentException::create(
+                'Doctrine\Common\Persistence\Event\LoadClassMetadataEventArgs',
+                $eventArgs
+            );
+        }
         $ea = $this->getEventAdapter($eventArgs);
         $this->loadMetadataForObjectClass($ea->getObjectManager(), $eventArgs->getClassMetadata());
     }
