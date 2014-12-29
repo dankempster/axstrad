@@ -63,7 +63,7 @@ class StrUtil
     /**
      * Truncats $string to $maxLength and appends '...'
      *
-     * @param $string The string to truncate
+     * @param string $string The string to truncate
      * @param $maxLength Maximum character length (excluding ellipse) of returned string.
      * @return string Returns $string unaltered if it's shorter then $maxLength.
      *         Otherwise $string is returned truncated to $maxLength with '...'

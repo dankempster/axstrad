@@ -13,8 +13,6 @@
 namespace Axstrad\DoctrineExtensions\Activatable\Mapping\Driver;
 
 use Axstrad\DoctrineExtensions\Activatable\Mapping\Validator;
-use Axstrad\DoctrineExtensions\Exception\InvalidMappingException;
-use Doctrine\Common\Persistence\Mapping\ClassMetadata;
 use Gedmo\Mapping\Driver\AbstractAnnotationDriver;
 
 

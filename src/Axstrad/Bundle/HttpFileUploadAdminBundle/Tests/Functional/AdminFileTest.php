@@ -7,7 +7,7 @@ use Axstrad\Bundle\HttpFileUploadBundle\Model\FileAware;
 use Symfony\Component\PropertyAccess\PropertyAccessor;
 
 
-class AdminFileUploadTest extends WebTestCase
+class AdminFileTest extends WebTestCase
 {
     public function uploadFileData()
     {
