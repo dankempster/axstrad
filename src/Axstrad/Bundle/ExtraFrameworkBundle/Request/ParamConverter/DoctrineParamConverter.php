@@ -53,42 +53,9 @@ class DoctrineParamConverter extends SensioDoctrineParamConverter
      */
     public function apply(Request $request, ConfigurationInterface $configuration)
     {
-        if (!$configuration instanceof ParamConverterConfig) {
-            return false;
-        }
-
         $this->convertClassParamToClassName($configuration);
 
-        if (parent::apply($request, $configuration)==true) {
-            // With the addition of the phpoption/phpoption package included as part of Symfony 2.2, it's possible that
-            // a PhpOption/Option object will be returned containing the result of the entity lookup. Especially if
-            // Axstrad\Doctrine\Orm\EntityManager is used.
-
-            // Fetch the return entity from the request - this is where parent::apply() puts it before returning a bool
-            $name = $configuration->getName();
-            $entity = $request->attributes->get($name);
-
-
-            if ($entity instanceof PhpOption) {
-                // Get the value from the PhpOption, if it has none then do one of two things
-                //  * if the param is optional, return false; Otherwise
-                //  * throw a NotFoundHttpException
-                $entity = $entity->getOrCall(function() use ($request, $configuration, $name) {
-                    $request->attributes->remove($name);
-
-                    if (!$configuration->isOptional()) {
-                        throw new NotFoundHttpException(sprintf('%s object not found.', $configuration->getClass()));
-                    }
-                    else return false;
-                });
-
-                // PhpOption has a value so set it to the request, overwriting the PhpOption
-                $request->attributes->set($name, $entity);
-            }
-
-            return true;
-        }
-        else return false;
+        return parent::apply($request, $configuration);
     }
 
     /**
@@ -96,10 +63,6 @@ class DoctrineParamConverter extends SensioDoctrineParamConverter
      */
     public function supports(ConfigurationInterface $configuration)
     {
-        if (!$configuration instanceof ParamConverterConfig) {
-            return false;
-        }
-
         $this->convertClassParamToClassName($configuration);
 
         return parent::supports($configuration);
@@ -116,6 +79,10 @@ class DoctrineParamConverter extends SensioDoctrineParamConverter
      */
     protected function convertClassParamToClassName(ParamConverterConfig $configuration)
     {
+        if (!$configuration instanceof ParamConverterConfig) {
+            return;
+        }
+
         if (preg_match('/^%(.*)%$/', $configuration->getClass(), $matches)) {
             $param = $this->container->getParameter($matches[1]);
             $configuration->setClass($param);
