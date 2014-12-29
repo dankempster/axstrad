@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8e48b22f926760eb187c5c114f9e06c5",
+    "hash": "1b2813864c1f799be17aaaa3bb2f440d",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1052,27 +1052,35 @@
         },
         {
             "name": "sensio/framework-extra-bundle",
-            "version": "v2.3.4",
+            "version": "v3.0.4",
             "target-dir": "Sensio/Bundle/FrameworkExtraBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
-                "reference": "cce05719041d952bbec856789ca18646a1891d03"
+                "reference": "b3bc3e67c8b6b68b18d727012183520d35ee762a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/cce05719041d952bbec856789ca18646a1891d03",
-                "reference": "cce05719041d952bbec856789ca18646a1891d03",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/b3bc3e67c8b6b68b18d727012183520d35ee762a",
+                "reference": "b3bc3e67c8b6b68b18d727012183520d35ee762a",
                 "shasum": ""
             },
             "require": {
                 "doctrine/common": "~2.2",
-                "symfony/framework-bundle": "~2.2"
+                "symfony/framework-bundle": "~2.3"
+            },
+            "require-dev": {
+                "symfony/expression-language": "~2.4",
+                "symfony/security-bundle": "~2.4"
+            },
+            "suggest": {
+                "symfony/expression-language": "",
+                "symfony/security-bundle": ""
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3.x-dev"
+                    "dev-master": "3.0.x-dev"
                 }
             },
             "autoload": {
@@ -1087,9 +1095,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "This bundle provides a way to configure your controllers with annotations",
@@ -1097,7 +1103,7 @@
                 "annotations",
                 "controllers"
             ],
-            "time": "2013-07-24 08:49:53"
+            "time": "2014-12-02 09:52:52"
         },
         {
             "name": "sensio/generator-bundle",
