@@ -28,3 +28,8 @@ matrix:
 notifications:
   email:
     - dev@dankempster.co.uk
+
+branches:
+  only:
+    - develop
+    - master
