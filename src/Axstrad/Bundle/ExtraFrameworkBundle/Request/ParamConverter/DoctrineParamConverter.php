@@ -15,6 +15,7 @@ namespace Axstrad\Bundle\ExtraFrameworkBundle\Request\ParamConverter;
 use Doctrine\Common\Persistence\ManagerRegistry;
 use PhpOption\Option as PhpOption;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ConfigurationInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter as ParamConverterConfig;
 use Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\DoctrineParamConverter as SensioDoctrineParamConverter;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -52,6 +53,10 @@ class DoctrineParamConverter extends SensioDoctrineParamConverter
      */
     public function apply(Request $request, ConfigurationInterface $configuration)
     {
+        if (!$configuration instanceof ParamConverterConfig) {
+            return false;
+        }
+
         $this->convertClassParamToClassName($configuration);
 
         if (parent::apply($request, $configuration)==true) {
@@ -91,6 +96,10 @@ class DoctrineParamConverter extends SensioDoctrineParamConverter
      */
     public function supports(ConfigurationInterface $configuration)
     {
+        if (!$configuration instanceof ParamConverterConfig) {
+            return false;
+        }
+
         $this->convertClassParamToClassName($configuration);
 
         return parent::supports($configuration);
@@ -102,10 +111,10 @@ class DoctrineParamConverter extends SensioDoctrineParamConverter
      * If <em>configuration</em>->getClass() matches /%(.*)%/ then it is interpreted as a DI container parameter; And
      * the DI container is asked for a parameter value using $1 (from the regex) as the key.
      *
-     * @param ConfigurationInterface $configuration
+     * @param ParamConverterConfig $configuration
      * @return void
      */
-    protected function convertClassParamToClassName(ConfigurationInterface $configuration)
+    protected function convertClassParamToClassName(ParamConverterConfig $configuration)
     {
         if (preg_match('/^%(.*)%$/', $configuration->getClass(), $matches)) {
             $param = $this->container->getParameter($matches[1]);
