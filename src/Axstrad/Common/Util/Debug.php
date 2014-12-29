@@ -26,13 +26,11 @@ class Debug
             $originalMaxDepth = ini_get('xdebug.var_display_max_depth');
         }
 
-        $return = BaseDebug::dump($var, $maxDepth, $stripTags);
+        BaseDebug::dump($var, $maxDepth, $stripTags);
 
         if (extension_loaded('xdebug')) {
             ini_set('xdebug.var_display_max_depth', $originalMaxDepth);
         }
-
-        return $return;
     }
 
     /**

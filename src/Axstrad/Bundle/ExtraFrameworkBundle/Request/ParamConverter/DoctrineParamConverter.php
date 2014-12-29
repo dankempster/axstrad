@@ -15,6 +15,7 @@ namespace Axstrad\Bundle\ExtraFrameworkBundle\Request\ParamConverter;
 use Doctrine\Common\Persistence\ManagerRegistry;
 use PhpOption\Option as PhpOption;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ConfigurationInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter as ParamConverterConfig;
 use Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\DoctrineParamConverter as SensioDoctrineParamConverter;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -52,7 +53,6 @@ class DoctrineParamConverter extends SensioDoctrineParamConverter
      */
     public function apply(Request $request, ConfigurationInterface $configuration)
     {
-
         $this->convertClassParamToClassName($configuration);
 
         return parent::apply($request, $configuration);
@@ -79,6 +79,10 @@ class DoctrineParamConverter extends SensioDoctrineParamConverter
      */
     protected function convertClassParamToClassName(ConfigurationInterface $configuration)
     {
+        if (!$configuration instanceof ParamConverterConfig) {
+            return;
+        }
+
         if (preg_match('/^%(.*)%$/', $configuration->getClass(), $matches)) {
             $param = $this->container->getParameter($matches[1]);
             $configuration->setClass($param);
