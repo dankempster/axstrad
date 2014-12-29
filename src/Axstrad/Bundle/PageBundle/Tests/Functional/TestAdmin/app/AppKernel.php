@@ -14,7 +14,7 @@
  * @author Aldo Chiecchia <zimage@tiscali.it>
  */
 
-namespace Axstrad\Bundle\PageBundle\Tests\Functional\app;
+namespace Axstrad\Bundle\PageBundle\Tests\Functional\TestAdmin\app;
 
 use Axstrad\Bundle\TestBundle\Functional\AbstractAxstradKernel;
 
@@ -43,6 +43,7 @@ class AppKernel extends AbstractAxstradKernel
 
             // Helper bundles - help write test code quicker
             new \Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+            new \Axstrad\Bundle\PageBundle\Tests\Functional\HelperBundle\AxstradPageTestHelperBundle(),
 
             // AxstradPageBundle and it's dependancies
             new \Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
@@ -51,7 +52,6 @@ class AppKernel extends AbstractAxstradKernel
             new \Symfony\Cmf\Bundle\SeoBundle\CmfSeoBundle(),
             new \Burgov\Bundle\KeyValueFormBundle\BurgovKeyValueFormBundle(),
             new \Axstrad\Bundle\SeoBundle\AxstradSeoBundle(),
-            new \Axstrad\Bundle\PageBundle\AxstradPageBundle(),
 
             // Sonta Admin and it's dependancies (required by AxstradPageBundle)
             new \Knp\Bundle\MenuBundle\KnpMenuBundle(),
@@ -62,7 +62,7 @@ class AppKernel extends AbstractAxstradKernel
 
             // AxstradPageBundle
             new \Axstrad\Bundle\PageBundle\AxstradPageBundle(),
-            new \Axstrad\Bundle\PageBundle\Tests\Functional\AxstradTestPageBundle(),
+            new \Axstrad\Bundle\PageBundle\Tests\Functional\TestAdmin\AxstradTestPageAdminBundle(),
         );
 
         return $bundles;

@@ -14,7 +14,7 @@
  * @author Aldo Chiecchia <zimage@tiscali.it>
  */
 
-namespace Axstrad\Bundle\PageBundle\Tests\Functional\app;
+namespace Axstrad\Bundle\PageBundle\Tests\Functional\TestPage\app;
 
 use Axstrad\Bundle\TestBundle\Functional\AbstractAxstradKernel;
 
@@ -43,6 +43,7 @@ class AppKernel extends AbstractAxstradKernel
 
             // Helper bundles - help write test code quicker
             new \Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+            new \Axstrad\Bundle\PageBundle\Tests\Functional\HelperBundle\AxstradPageTestHelperBundle(),
 
             // SEO Bundles
             new \Sonata\SeoBundle\SonataSeoBundle(),
@@ -54,7 +55,7 @@ class AppKernel extends AbstractAxstradKernel
             new \Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new \Axstrad\Bundle\DoctrineExtensionsBundle\AxstradDoctrineExtensionsBundle(),
             new \Axstrad\Bundle\PageBundle\AxstradPageBundle(),
-            new \Axstrad\Bundle\PageBundle\Tests\Functional\AxstradTestPageBundle(),
+            new \Axstrad\Bundle\PageBundle\Tests\Functional\TestPage\AxstradTestPageBundle(),
         );
 
         return $bundles;

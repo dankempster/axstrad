@@ -19,7 +19,12 @@ class AxstradPageExtension extends Extension
      */
     public function load(array $configs, ContainerBuilder $container)
     {
-        if ($container->hasExtension('SonataAdmin')) {
+        $configuration = new Configuration();
+        $config = $this->processConfiguration($configuration, $configs);
+
+        if ($config['admin_enabled'] &&
+            array_key_exists('SonataAdminBundle', $container->getParameter('kernel.bundles'))
+        ) {
             $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
             $loader->load('admin.yml');
         }

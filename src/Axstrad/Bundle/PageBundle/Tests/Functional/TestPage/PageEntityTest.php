@@ -1,11 +1,14 @@
 <?php
-namespace Axstrad\Bundle\PageBundle\Tests\Functional\Entity;
+namespace Axstrad\Bundle\PageBundle\Tests\Functional\TestPage;
 
 use Axstrad\Bundle\PageBundle\Entity\Page;
 use Axstrad\Bundle\TestBundle\Functional\WebTestCase;
 
 
-class PageTest extends WebTestCase
+/**
+ * Axstrad\Bundle\PageBundle\Tests\Functional\TestPage\PageEntityTest
+ */
+class PageEntityTest extends WebTestCase
 {
     protected $em;
 
@@ -19,7 +22,7 @@ class PageTest extends WebTestCase
     protected function loadBundlesFixtures()
     {
         return array(
-            'AxstradTestPageBundle'
+            'AxstradPageTestHelperBundle',
         );
     }
 

@@ -1,5 +1,5 @@
 <?php
-namespace Axstrad\Bundle\PageBundle\Tests\Functional\Admin;
+namespace Axstrad\Bundle\PageBundle\Tests\Functional\TestAdmin\Admin;
 
 use Axstrad\Bundle\TestBundle\Functional\WebTestCase;
 
@@ -21,7 +21,7 @@ class PageAdminTest extends WebTestCase
     public function loadBundlesFixtures()
     {
         return array(
-            'AxstradTestPageBundle',
+            'AxstradPageTestHelperBundle',
         );
     }
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Axstrad\Bundle\PageBundle\Tests\Functional\Controller;
+namespace Axstrad\Bundle\PageBundle\Tests\Functional\TestPageExtension\Controller;
 
 use Axstrad\Bundle\SeoBundle\Configuration\SeoPageData;
-use Axstrad\Bundle\PageBundle\Tests\Functional\Entity\Event;
+use Axstrad\Bundle\PageBundle\Tests\Functional\TestPageExtension\Entity\Event;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Cmf\Bundle\SeoBundle\Model\SeoMetadata;
@@ -14,7 +14,7 @@ new SeoPageData(array());
 
 
 /**
- * Axstrad\Bundle\PageBundle\Tests\Functional\Controller\EventController
+ * Axstrad\Bundle\PageBundle\Tests\Functional\TestPageExtension\Controller\EventController
  *
  * A controller to test that AxstradPageBundle:Page entity can be extended and
  * resused with esae.

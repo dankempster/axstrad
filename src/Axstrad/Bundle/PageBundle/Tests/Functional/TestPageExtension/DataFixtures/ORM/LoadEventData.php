@@ -1,14 +1,14 @@
 <?php
-namespace Axstrad\Bundle\PageBundle\Tests\Functional\DataFixtures\ORM;
+namespace Axstrad\Bundle\PageBundle\Tests\Functional\TestPageExtension\DataFixtures\ORM;
 
-use Axstrad\Bundle\PageBundle\Tests\Functional\Entity\Event;
+use Axstrad\Bundle\PageBundle\Tests\Functional\TestPageExtension\Entity\Event;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Cmf\Bundle\SeoBundle\Model\SeoMetadata;
 
 
 /**
- * Axstrad\Bundle\PageBundle\Tests\Functional\DataFixtures\ORM\LoadEventData
+ * Axstrad\Bundle\PageBundle\Tests\Functional\TestPageExtension\DataFixtures\ORM\LoadEventData
  */
 class LoadEventData implements FixtureInterface
 {

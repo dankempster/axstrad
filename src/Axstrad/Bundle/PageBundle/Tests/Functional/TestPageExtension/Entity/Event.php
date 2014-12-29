@@ -1,10 +1,12 @@
 <?php
-namespace Axstrad\Bundle\PageBundle\Tests\Functional\Entity;
+namespace Axstrad\Bundle\PageBundle\Tests\Functional\TestPageExtension\Entity;
 
 use Axstrad\Component\Page\Entity\BasePage;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * Axstrad\Bundle\PageBundle\Tests\Functional\TestPageExtension\Entity\Event
+ *
  * @ORM\Entity
  */
 class Event extends BasePage

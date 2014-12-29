@@ -1,11 +1,10 @@
 <?php
-namespace Axstrad\Bundle\PageBundle\Tests\Functional;
+namespace Axstrad\Bundle\PageBundle\Tests\Functional\TestPage;
 
 use Axstrad\Bundle\TestBundle\Functional\WebTestCase;
 
-new \Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter(array());
 
-class CanInheritPageFunctionality extends WebTestCase
+class SeoDataTest extends WebTestCase
 {
     protected $crawler;
 
@@ -19,7 +18,7 @@ class CanInheritPageFunctionality extends WebTestCase
     protected function loadBundlesFixtures()
     {
         return array(
-            'AxstradTestPageBundle'
+            'AxstradPageTestHelperBundle',
         );
     }
 
@@ -28,37 +27,14 @@ class CanInheritPageFunctionality extends WebTestCase
         parent::setUp();
 
         $this->client = self::createClient();
-        $this->crawler = $this->client->request('GET', '/events/an-event');
+        $this->crawler = $this->client->request('GET', '/about-us');
         $this->response = $this->client->getResponse();
-    }
-
-    public function testPageHasHeading()
-    {
-        $this->assertTrue(
-            $this->crawler->filter('h1')->count() > 0
-        );
-    }
-
-    public function testPageHasCorrectHeadingValue()
-    {
-        $this->assertEquals(
-            'An Event',
-            $this->crawler->filter('h1')->text()
-        );
-    }
-
-    public function testPageHasCopy()
-    {
-        $this->assertEquals(
-            'Our first event.',
-            $this->crawler->filter('p')->text()
-        );
     }
 
     public function testPageHasTitle()
     {
         $this->assertEquals(
-            'An Event | AxstradTestPageBundle',
+            'About Us | AxstradTestPageBundle',
             $this->crawler->filter('title')->text()
         );
     }
@@ -66,7 +42,7 @@ class CanInheritPageFunctionality extends WebTestCase
     public function testPageHasMetaKeywords()
     {
         $this->assertEquals(
-            'an, event',
+            'about, us',
             $this->crawler->filter('meta[name="keywords"]')->attr('content')
         );
     }
@@ -74,7 +50,7 @@ class CanInheritPageFunctionality extends WebTestCase
     public function testPageHasMetaDescription()
     {
         $this->assertEquals(
-            'Meta description for an event.',
+            'Meta description about us.',
             $this->crawler->filter('meta[name="description"]')->attr('content')
         );
     }

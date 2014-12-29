@@ -1,11 +1,10 @@
 <?php
-namespace Axstrad\Bundle\PageBundle\Tests\Functional\Controller;
+namespace Axstrad\Bundle\PageBundle\Tests\Functional\TestPageExtension;
 
 use Axstrad\Bundle\TestBundle\Functional\WebTestCase;
 
-new \Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter(array());
 
-class DefaultControllerTest extends WebTestCase
+class PageExtensionTest extends WebTestCase
 {
     protected $crawler;
 
@@ -19,7 +18,7 @@ class DefaultControllerTest extends WebTestCase
     protected function loadBundlesFixtures()
     {
         return array(
-            'AxstradTestPageBundle'
+            'AxstradTestPageExtensionBundle',
         );
     }
 
@@ -28,16 +27,8 @@ class DefaultControllerTest extends WebTestCase
         parent::setUp();
 
         $this->client = self::createClient();
-        $this->crawler = $this->client->request('GET', '/about-us');
+        $this->crawler = $this->client->request('GET', '/events/an-event');
         $this->response = $this->client->getResponse();
-    }
-
-    public function testPageIsSuccessful()
-    {
-        $this->assertTrue(
-            $this->response->isSuccessful(),
-            'Request was not successful'
-        );
     }
 
     public function testPageHasHeading()
@@ -50,7 +41,7 @@ class DefaultControllerTest extends WebTestCase
     public function testPageHasCorrectHeadingValue()
     {
         $this->assertEquals(
-            'About Us',
+            'An Event',
             $this->crawler->filter('h1')->text()
         );
     }
@@ -58,8 +49,32 @@ class DefaultControllerTest extends WebTestCase
     public function testPageHasCopy()
     {
         $this->assertEquals(
-            'A page about us.',
+            'Our first event.',
             $this->crawler->filter('p')->text()
+        );
+    }
+
+    public function testPageHasTitle()
+    {
+        $this->assertEquals(
+            'An Event | AxstradTestPageExtensionBundle',
+            $this->crawler->filter('title')->text()
+        );
+    }
+
+    public function testPageHasMetaKeywords()
+    {
+        $this->assertEquals(
+            'an, event',
+            $this->crawler->filter('meta[name="keywords"]')->attr('content')
+        );
+    }
+
+    public function testPageHasMetaDescription()
+    {
+        $this->assertEquals(
+            'Meta description for an event.',
+            $this->crawler->filter('meta[name="description"]')->attr('content')
         );
     }
 }
