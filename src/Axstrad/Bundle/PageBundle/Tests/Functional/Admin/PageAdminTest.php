@@ -1,11 +1,11 @@
 <?php
-namespace Axstrad\Bundle\PageAdminBundle\Tests\Functional\Admin;
+namespace Axstrad\Bundle\PageBundle\Tests\Functional\Admin;
 
 use Axstrad\Bundle\TestBundle\Functional\WebTestCase;
 
 
 /**
- * Axstrad\Bundle\PageAdminBundle\Tests\Functional\Admin\PageAdminTest
+ * Axstrad\Bundle\PageBundle\Tests\Functional\Admin\PageAdminTest
  */
 class PageAdminTest extends WebTestCase
 {
@@ -21,7 +21,7 @@ class PageAdminTest extends WebTestCase
     public function loadBundlesFixtures()
     {
         return array(
-            'AxstradTestPageAdminBundle',
+            'AxstradTestPageBundle',
         );
     }
 

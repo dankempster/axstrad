@@ -1,5 +1,5 @@
 <?php
-namespace Axstrad\Bundle\PageAdminBundle\Admin;
+namespace Axstrad\Bundle\PageBundle\Admin;
 
 use Axstrad\Bundle\PageBundle\Entity\Page;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -9,7 +9,7 @@ use Sonata\AdminBundle\Admin\Admin;
 
 
 /**
- * Axstrad\Bundle\PageAdminBundle\Admin\PageAdmin
+ * Axstrad\Bundle\PageBundle\Admin\PageAdmin
  */
 class PageAdmin extends Admin
 {

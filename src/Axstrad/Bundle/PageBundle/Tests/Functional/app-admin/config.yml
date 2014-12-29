@@ -117,12 +117,12 @@ stof_doctrine_extensions:
 sonata_seo:
     page:
         # Default page title
-        title: "AxstradTestPageAdminBundle"
+        title: "AxstradTestPageBundle"
         # Default meta data
         metas:
             name:
                 # keywords: "foo bar"
-                # description: AxstradTestPageAdminBundle
+                # description: AxstradTestPageBundle
                 robots: "index, follow"
             http-equiv:
                 'Content-Type': "text/html; charset=utf-8"
@@ -138,7 +138,7 @@ cmf_seo:
     persistence:
         orm: true
     # Standard page title
-    title: "%%content_title%% | AxstradTestPageAdminBundle"
+    title: "%%content_title%% | AxstradTestPageBundle"
 
 # Menu Configuration
 knp_menu:

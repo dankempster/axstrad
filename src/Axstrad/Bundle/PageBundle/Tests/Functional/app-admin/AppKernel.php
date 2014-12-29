@@ -14,7 +14,7 @@
  * @author Aldo Chiecchia <zimage@tiscali.it>
  */
 
-namespace Axstrad\Bundle\PageAdminBundle\Tests\Functional\app;
+namespace Axstrad\Bundle\PageBundle\Tests\Functional\app;
 
 use Axstrad\Bundle\TestBundle\Functional\AbstractAxstradKernel;
 
@@ -53,16 +53,16 @@ class AppKernel extends AbstractAxstradKernel
             new \Axstrad\Bundle\SeoBundle\AxstradSeoBundle(),
             new \Axstrad\Bundle\PageBundle\AxstradPageBundle(),
 
-            // Sonta Admin and it's dependancies (required by AxstradPageAdminBundle)
+            // Sonta Admin and it's dependancies (required by AxstradPageBundle)
             new \Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new \Sonata\CoreBundle\SonataCoreBundle(),
             new \Sonata\BlockBundle\SonataBlockBundle(),
             new \Sonata\AdminBundle\SonataAdminBundle(),
             new \Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
 
-            // AxstradPageAdminBundle
-            new \Axstrad\Bundle\PageAdminBundle\AxstradPageAdminBundle(),
-            new \Axstrad\Bundle\PageAdminBundle\Tests\Functional\AxstradTestPageAdminBundle(),
+            // AxstradPageBundle
+            new \Axstrad\Bundle\PageBundle\AxstradPageBundle(),
+            new \Axstrad\Bundle\PageBundle\Tests\Functional\AxstradTestPageBundle(),
         );
 
         return $bundles;
@@ -77,6 +77,6 @@ class AppKernel extends AbstractAxstradKernel
     {
         return  $this->name .
                 ucfirst($this->environment) .
-                'DebugProjectContainerPageAdminBundle';
+                'DebugProjectContainerPageBundle';
     }
 }
