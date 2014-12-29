@@ -18,7 +18,7 @@ class BaseFile implements
     /**
      * @var null|UploadedFile
      */
-    private $file;
+    protected $file;
 
 
     /**
