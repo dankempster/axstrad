@@ -1,20 +1,16 @@
 filter:
     excluded_paths:
-        - src/Axstrad/Common/Tests/*
-        - src/Axstrad/Component/Filesystem/Tests/*
-        - src/Axstrad/Component/OptionsResolver/Tests/*
-        - src/Axstrad/Component/Content/Tests/*
-        - src/Axstrad/DoctrineExtensions/Tests/*
-        - src/Axstrad/Bundle/DoctrineExtensionsBundle/Tests/*
-        - src/Axstrad/Bundle/SeoBundle/Tests/*
-        - src/Axstrad/Bundle/PageBundle/Tests/*
-        - src/Axstrad/Bundle/PageAdminBundle/Tests/*
-        - src/Axstrad/Bundle/WebFrameworkBundle/Tests/*
-        - src/Axstrad/Component/Test/Example/*
-        - src/Axstrad/DoctrineExtensions/Tests/*
-        - vendor/*
-        - src/Axstrad/Component/Test/MockedIteratorTest.php
+        - src/Axstrad/Bridge/*/Tests/*
+        - src/Axstrad/Bundle/*/Tests/*
         - src/Axstrad/Bundle/TestBundle/Functional/WebTestCase.php
+        - src/Axstrad/Common/Tests/*
+        - src/Axstrad/Component/*/Tests/*
+        - src/Axstrad/Component/Test/Example/*
+        - src/Axstrad/Component/Test/MockedIteratorTest.php
+        - src/Axstrad/DoctrineExtensions/Tests/*
+        - src/Axstrad/Symfony/*/Tests/*
+        - src/Axstrad/SymfonyBridge/*/Tests/*
+        - vendor/*
 tools:
     external_code_coverage:
         timeout: 1200
