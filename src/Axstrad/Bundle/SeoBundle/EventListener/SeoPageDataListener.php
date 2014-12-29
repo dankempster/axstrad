@@ -65,8 +65,8 @@ class SeoPageDataListener implements EventSubscriberInterface
 
     /**
      * @param  SeoPageData $configuration
-     * @param  object $controller
-     * @param  Request $request
+     * @param  callable $controller
+     * @param  \Symfony\Component\HttpFoundation\Request $request
      * @return void
      */
     protected function identifySeoDataObject($configuration, $controller, $request)

@@ -13,7 +13,6 @@
 namespace Axstrad\DoctrineExtensions\Activatable\Mapping\Event\Adapter;
 
 use Axstrad\DoctrineExtensions\Activatable\Mapping\Event\ActivatableAdapter;
-use Axstrad\DoctrineExtensions\Exception\InvalidArgumentException;
 use Gedmo\Mapping\Event\Adapter\ORM as BaseAdapterORM;
 
 
