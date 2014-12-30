@@ -7,9 +7,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @author Dan Kempster <dev@dankempster.co.uk>
- * @package Axstrad\Common
- * @subpackage Util
+ * @copyright 2014-2015 Dan Kempster <dev@dankempster.co.uk>
  */
 namespace Axstrad\Common\Util;
 
@@ -20,6 +18,10 @@ use Axstrad\Common\Exception\InvalidArgumentException;
  * Axstrad\Common\Util\ArrayUtil
  *
  * A collection of array functions.
+ *
+ * @author Dan Kempster <dev@dankempster.co.uk>
+ * @package Axstrad\Common
+ * @subpackage Util
  */
 final class ArrayUtil
 {
