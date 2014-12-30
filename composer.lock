@@ -4,8 +4,48 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8e48b22f926760eb187c5c114f9e06c5",
+    "hash": "3c81935db9ea27f9f03ed7dfca42279c",
     "packages": [
+        {
+            "name": "axstrad/test",
+            "version": "v0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dankempster/axstrad-test.git",
+                "reference": "800f1f621667c0d0b61df013184aed187ea7e8db"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dankempster/axstrad-test/zipball/800f1f621667c0d0b61df013184aed187ea7e8db",
+                "reference": "800f1f621667c0d0b61df013184aed187ea7e8db",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.1"
+            },
+            "type": "component",
+            "autoload": {
+                "psr-4": {
+                    "Axstrad\\Component\\Test\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dan Kempster",
+                    "email": "dev@dankempster.co.uk",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Test component used by all Axstrad packages.",
+            "time": "2014-12-29 23:30:19"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.2.3",
@@ -2208,16 +2248,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.11.0",
+            "version": "1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "ec3961874c43840e96da3a8a1ed20d8c73d7e5aa"
+                "reference": "1fbe8c2641f2b163addf49cc5e18f144bec6b19f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/ec3961874c43840e96da3a8a1ed20d8c73d7e5aa",
-                "reference": "ec3961874c43840e96da3a8a1ed20d8c73d7e5aa",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1fbe8c2641f2b163addf49cc5e18f144bec6b19f",
+                "reference": "1fbe8c2641f2b163addf49cc5e18f144bec6b19f",
                 "shasum": ""
             },
             "require": {
@@ -2231,7 +2271,7 @@
                 "aws/aws-sdk-php": "~2.4, >2.4.8",
                 "doctrine/couchdb": "~1.0@dev",
                 "graylog2/gelf-php": "~1.0",
-                "phpunit/phpunit": "~3.7.0",
+                "phpunit/phpunit": "~4.0",
                 "raven/raven": "~0.5",
                 "ruflin/elastica": "0.90.*",
                 "videlalvaro/php-amqplib": "~2.4"
@@ -2250,7 +2290,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.11.x-dev"
+                    "dev-master": "1.12.x-dev"
                 }
             },
             "autoload": {
@@ -2276,7 +2316,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2014-09-30 13:30:58"
+            "time": "2014-12-29 21:29:35"
         },
         {
             "name": "phpunit/php-code-coverage",
