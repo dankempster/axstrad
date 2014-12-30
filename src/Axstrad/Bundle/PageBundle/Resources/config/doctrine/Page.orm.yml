@@ -1,6 +1,11 @@
 Axstrad\Bundle\PageBundle\Entity\Page:
     type: entity
     table: axstrad_page
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
     fields:
         active:
             type: boolean

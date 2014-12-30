@@ -12,7 +12,6 @@
 
 namespace Axstrad\Bundle\DoctrineExtensionsBundle\Tests\Functional\Entity;
 
-use Axstrad\Component\DoctrineOrm\Entity\BaseEntity;
 use Axstrad\DoctrineExtensions\Mapping\Annotation as Axstrad;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -24,8 +23,16 @@ use Doctrine\ORM\Mapping as ORM;
  * @Axstrad\Activatable(fieldName="active")
  * @ORM\Entity
  */
-class SelfConfiguredPage extends BaseEntity
+class SelfConfiguredPage
 {
+    /**
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     * @var integer
+     */
+    protected $id;
+
     /**
      * @ORM\Column(type="string", length=255)
      * @var string
@@ -37,4 +44,14 @@ class SelfConfiguredPage extends BaseEntity
      * @var boolean
      */
     public $active = false;
+
+    /**
+     * Get the entity's ID.
+     *
+     * @return integer Returns the entity's ID.
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 }

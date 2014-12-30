@@ -13,8 +13,7 @@
 namespace Axstrad\Component\Content\Orm;
 
 use Axstrad\Component\Content\Traits\Copy as CopyTrait;
-use Axstrad\Component\DoctrineOrm\Entity\BaseEntity;
-
+use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Axstrad\Component\Content\Orm\Copy
@@ -24,7 +23,27 @@ use Axstrad\Component\DoctrineOrm\Entity\BaseEntity;
  * @package Axstrad/Content
  * @subpackage ORM
  */
-abstract class Copy extends BaseEntity
+abstract class Copy
 {
     use CopyTrait;
+
+
+    /**
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     * @var integer
+     */
+    protected $id;
+
+
+    /**
+     * Get the entity's ID.
+     *
+     * @return integer Returns the entity's ID.
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 }
