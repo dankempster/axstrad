@@ -25,7 +25,7 @@ use Axstrad\Component\Content\Exception\InvalidArgumentException;
 trait Copy
 {
     /**
-     * @var string $copy The copy
+     * @var null|string $copy The copy
      */
     protected $copy;
 
