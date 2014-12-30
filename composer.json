@@ -13,6 +13,7 @@
     ],
     "require": {
         "php": ">=5.4",
+        "axstrad/common": "0.1.*",
         "axstrad/test": "0.1.*",
         "doctrine/common": "~2.3",
         "doctrine/doctrine-bundle": "~1",
