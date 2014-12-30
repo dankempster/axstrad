@@ -10,14 +10,14 @@
  * @author Dan Kempster <dev@dankempster.co.uk>
  * @package Axstrad\OptionsResolver
  */
-namespace Axstrad\Component\OptionsResolver;
+namespace Axstrad\Symfony\OptionsResolver;
 
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 
 /**
- * Axstrad\Component\OptionsResolver\ResolvesOptionsTrait
+ * Axstrad\Symfony\OptionsResolver\ResolvesOptionsTrait
  */
 trait ResolvesOptionsTrait
 {

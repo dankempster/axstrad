@@ -11,14 +11,14 @@
  * @package Axstrad\Common
  * @subpackage Traits
  */
-namespace Axstrad\Component\OptionsResolver\Tests;
+namespace Axstrad\Symfony\OptionsResolver\Tests;
 
-use Axstrad\Component\OptionsResolver\ResolvesOptionsTrait;
+use Axstrad\Symfony\OptionsResolver\ResolvesOptionsTrait;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 
 /**
- * Axstrad\Component\OptionsResolver\Tests\ResolvesOptionsAbstractTestClass
+ * Axstrad\Symfony\OptionsResolver\Tests\ResolvesOptionsAbstractTestClass
  */
 abstract class ResolvesOptionsAbstractTestClass
 {

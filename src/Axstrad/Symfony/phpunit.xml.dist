@@ -20,6 +20,10 @@
         <testsuite name="Axstrad/Symfony/EventDispatcher">
             <directory suffix="Test.php">EventDispatcher/Tests/</directory>
         </testsuite>
+
+        <testsuite name="Axstrad/Symfony/OptionsResolver">
+            <directory suffix="Test.php">OptionsResolver/Tests/</directory>
+        </testsuite>
     </testsuites>
 
     <logging>

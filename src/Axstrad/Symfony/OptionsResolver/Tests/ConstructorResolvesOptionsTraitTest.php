@@ -11,14 +11,14 @@
  * @package Axstrad\Common
  * @subpackage Traits
  */
-namespace Axstrad\Component\OptionsResolver\Tests;
+namespace Axstrad\Symfony\OptionsResolver\Tests;
 
 
 /**
- * Axstrad\Component\OptionsResolver\ConstructorResolvesOptionsTraitTest
+ * Axstrad\Symfony\OptionsResolver\ConstructorResolvesOptionsTraitTest
  *
- * covers Axstrad\Component\OptionsResolver\ConstructorResolvesOptionsTrait
- * @uses Axstrad\Component\OptionsResolver\ConstructorResolvesOptionsTrait
+ * covers Axstrad\Symfony\OptionsResolver\ConstructorResolvesOptionsTrait
+ * @uses Axstrad\Symfony\OptionsResolver\ConstructorResolvesOptionsTrait
  */
 class ConstructorResolvesOptionsTraitTest extends \PHPUnit_Framework_TestCase
 {

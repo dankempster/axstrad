@@ -10,11 +10,11 @@
  * @author Dan Kempster <dev@dankempster.co.uk>
  * @package Axstrad\OptionsResolver
  */
-namespace Axstrad\Component\OptionsResolver;
+namespace Axstrad\Symfony\OptionsResolver;
 
 
 /**
- * Axstrad\Component\OptionsResolver\ConstructorResolvesOptionsTrait
+ * Axstrad\Symfony\OptionsResolver\ConstructorResolvesOptionsTrait
  *
  */
 trait ConstructorResolvesOptionsTrait
