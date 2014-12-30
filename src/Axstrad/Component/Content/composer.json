@@ -1,0 +1,45 @@
+{
+    "name": "axstrad/extra-framework-bundle",
+    "description": "Extra framework bundle for Symfony 2 applications",
+    "type": "library",
+    "keywords": ["symfony bundle"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dan Kempster",
+            "email": "dev@dankempster.co.uk",
+            "role": "Developer"
+        }
+    ],
+
+    "require": {
+        "php": "~5.4",
+        "axstrad/common": "0.1.*",
+        "doctrine/common": "~2.3"
+    },
+
+    "require-dev": {
+        "axstrad/test": "0.1.*",
+        "phpunit/phpunit": "~4.1"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Axstrad\\Component\\Content\\": ""
+        }
+    },
+
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev",
+            "dev-develop": "0.2.x-dev"
+        }
+    },
+
+    "archive": {
+        "exclude": ["!vendor", "Tests", "phpunit.xml*", ".gitignore", ".travis.yml"]
+    }
+}
