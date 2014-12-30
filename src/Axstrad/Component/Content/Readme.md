@@ -1,6 +1,6 @@
 Simple modles to hold content.
 
-# Axstrad\Content
+# Axstrad/Content
 
 __namespace:__ Axstrad\Component\Content;
 
@@ -9,7 +9,7 @@ __namespace:__ Axstrad\Component\Content;
  - Various content related models & traits
     - Copy
     - Article
- - Provides ORM mapping in YAML format
+ - Provides ORM mapping in YAML format config/orm
 
 
 # Installation
@@ -18,7 +18,7 @@ __namespace:__ Axstrad\Component\Content;
 ```
 "require": {
     ...
-    "axstrad/axstrad": "dev-develop@dev"
+    "axstrad/content": "0.1.*"
 }
 ```
 
@@ -36,7 +36,7 @@ doctrine:
             axstrad_content:
                 type: yml
                 prefix: Axstrad\Component\Content\Orm
-                dir: "%kernel.root_dir%/../vendor/axstrad/axstrad/src/Axstrad/Component/Content/config/Orm"
+                dir: "%kernel.root_dir%/../vendor/axstrad/content/config/Orm"
                 alias: AxstradContent
                 is_bundle: false
 ```

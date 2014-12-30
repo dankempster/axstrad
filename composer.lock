@@ -4,20 +4,69 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3c81935db9ea27f9f03ed7dfca42279c",
+    "hash": "a6b18591256e55a0b488db2b9b6ce808",
     "packages": [
         {
-            "name": "axstrad/test",
-            "version": "v0.1",
+            "name": "axstrad/common",
+            "version": "v0.1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/dankempster/axstrad-test.git",
-                "reference": "800f1f621667c0d0b61df013184aed187ea7e8db"
+                "url": "https://github.com/dankempster/axstrad-common.git",
+                "reference": "62010222923da6ad894d57b79e54e6753647b1d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dankempster/axstrad-test/zipball/800f1f621667c0d0b61df013184aed187ea7e8db",
-                "reference": "800f1f621667c0d0b61df013184aed187ea7e8db",
+                "url": "https://api.github.com/repos/dankempster/axstrad-common/zipball/62010222923da6ad894d57b79e54e6753647b1d5",
+                "reference": "62010222923da6ad894d57b79e54e6753647b1d5",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "~2.4",
+                "php": ">=5.4",
+                "phpoption/phpoption": "~1.3"
+            },
+            "require-dev": {
+                "axstrad/test": "0.1.*",
+                "phpunit/phpunit": "~4.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev",
+                    "dev-develop": "0.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Axstrad\\Common\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dan Kempster",
+                    "email": "dev@dankempster.co.uk",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Common classes used throughout Axstrad projects",
+            "time": "2014-12-30 02:01:31"
+        },
+        {
+            "name": "axstrad/test",
+            "version": "v0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dankempster/axstrad-test.git",
+                "reference": "87b841104168680f94dc4d71122337b86998b2ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dankempster/axstrad-test/zipball/87b841104168680f94dc4d71122337b86998b2ba",
+                "reference": "87b841104168680f94dc4d71122337b86998b2ba",
                 "shasum": ""
             },
             "require": {
@@ -27,6 +76,12 @@
                 "phpunit/phpunit": "~4.1"
             },
             "type": "component",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev",
+                    "dev-develop": "0.2.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Axstrad\\Component\\Test\\": ""
@@ -44,7 +99,7 @@
                 }
             ],
             "description": "Test component used by all Axstrad packages.",
-            "time": "2014-12-29 23:30:19"
+            "time": "2014-12-30 02:19:11"
         },
         {
             "name": "doctrine/annotations",

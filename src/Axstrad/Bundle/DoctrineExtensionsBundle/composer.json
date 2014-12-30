@@ -3,7 +3,7 @@
     "description": "Symfony 2 Bundle for Axstrad\\DoctrineExtensions",
     "type": "library",
     "keywords": ["doctrine", "extensions", "symfony bundle"],
-    "license": "GPL-2.0",
+    "license": "MIT",
     "authors": [
         {
             "name": "Dan Kempster",

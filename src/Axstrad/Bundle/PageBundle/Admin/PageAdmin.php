@@ -1,4 +1,15 @@
 <?php
+/**
+ * This file is part of the Axstrad library.
+ *
+ * (c) Dan Kempster <dev@dankempster.co.uk>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @copyright 2014-2015 Dan Kempster <dev@dankempster.co.uk>
+ */
+
 namespace Axstrad\Bundle\PageBundle\Admin;
 
 use Axstrad\Bundle\PageBundle\Entity\Page;
@@ -7,9 +18,13 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Admin\Admin;
 
-
 /**
  * Axstrad\Bundle\PageBundle\Admin\PageAdmin
+ *
+ * @author Dan Kempster <dev@dankempster.co.uk>
+ * @license MIT
+ * @package Axstrad/PageBundle
+ * @subpackage Admin
  */
 class PageAdmin extends Admin
 {

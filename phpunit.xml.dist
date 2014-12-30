@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<phpunit bootstrap="./vendor/autoload.php"
+<phpunit bootstrap="tests-bootstrap.php"
          backupGlobals="false"
          backupStaticAttributes="false"
          colors="true"
@@ -27,6 +27,22 @@
             <file>./src/Axstrad/Component/Test/MockedIteratorTest.php</file>
         </testsuite>
 
+        <testsuite name="Axstrad\Symfony\Filesystem">
+            <directory suffix="Test.php">./src/Axstrad/Symfony/Filesystem/Tests/</directory>
+        </testsuite>
+
+        <testsuite name="Axstrad\Symfony\EventDispatcher">
+            <directory suffix="Test.php">./src/Axstrad/Symfony/EventDispatcher/Tests</directory>
+        </testsuite>
+
+        <testsuite name="Axstrad\Symfony\Finder">
+            <directory suffix="Test.php">./src/Axstrad/Symfony/Finder/Tests</directory>
+        </testsuite>
+
+        <testsuite name="Axstrad\Symfony\OptionsResolver">
+            <directory suffix="Test.php">./src/Axstrad/Symfony/OptionsResolver/Tests/</directory>
+        </testsuite>
+
         <testsuite name="Axstrad\Common">
             <directory suffix="Test.php">./src/Axstrad/Common/Tests/Exception</directory>
             <directory suffix="Test.php">./src/Axstrad/Common/Tests/Util</directory>
@@ -44,6 +60,18 @@
 
         <testsuite name="Axstrad\OptionsResolver">
             <directory suffix="Test.php">./src/Axstrad/Component/OptionsResolver/Tests/</directory>
+        </testsuite>
+
+        <testsuite name="Axstrad\WorkForce">
+            <directory suffix="Test.php">./src/Axstrad/Component/WorkForce/Tests</directory>
+        </testsuite>
+
+        <testsuite name="Axstrad\SymfonyBridge\WorkForce">
+            <directory suffix="Test.php">./src/Axstrad/SymfonyBridge/WorkForce/Tests</directory>
+        </testsuite>
+
+        <testsuite name="Axstrad\Filesystem">
+            <directory suffix="Test.php">./src/Axstrad/Component/Filesystem/Tests/</directory>
         </testsuite>
 
         <testsuite name="Axstrad\Content">
@@ -109,6 +137,8 @@
                 <directory>./src/Axstrad/Bundle/*/Tests</directory>
                 <directory>./src/Axstrad/Component/*/Tests</directory>
                 <directory>./src/Axstrad/Component/Test/Example</directory>
+                <directory>./src/Axstrad/Symfony/*/Tests</directory>
+                <directory>./src/Axstrad/SymfonyBridge/*/Tests</directory>
                 <directory>./vendor</directory>
             </exclude>
         </whitelist>
