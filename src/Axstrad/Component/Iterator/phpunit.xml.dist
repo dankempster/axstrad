@@ -10,25 +10,36 @@
          stopOnFailure="false"
          syntaxCheck="false"
          bootstrap="./vendor/autoload.php"
+         strict="false"
+         verbose="false"
 >
     <testsuites>
-        <testsuite name="Axstrad\Component\Iterator Test Suite">
-            <directory>./tests/</directory>
+        <testsuite name="Axstrad/Iterator">
+            <directory>Tests/</directory>
         </testsuite>
     </testsuites>
+
+    <logging>
+        <!-- <log type="coverage-html"
+             target="build/coverage"
+             title="Axstrad Library"
+             charset="UTF-8"
+             yui="true"
+             highlight="true"
+             lowUpperBound="35"
+             highLowerBound="70"
+        /> -->
+        <!-- <log type="coverage-clover" target="build/logs/clover.xml"/> -->
+        <!-- <log type="junit" target="build/logs/junit.xml" logIncompleteSkipped="false"/> -->
+    </logging>
 
     <filter>
         <whitelist>
             <directory>./</directory>
             <exclude>
-                <directory>./resources</directory>
-                <directory>./tests</directory>
-                <directory>./vendor</directory>
+                <directory>Tests</directory>
+                <directory>vendor</directory>
             </exclude>
         </whitelist>
     </filter>
-
-    <logging>
-        <log type="coverage-html" target="./resources/docs/code-coverage-report" charset="UTF-8" highlight="false" lowUpperBound="35" highLowerBound="70"/>
-    </logging>
 </phpunit>
