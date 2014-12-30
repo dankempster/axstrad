@@ -7,9 +7,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @author Dan Kempster <dev@dankempster.co.uk>
- * @package Axstrad\Bundle\ExtraFrameworkBundle
+ * @copyright 2014-2015 Dan Kempster <dev@dankempster.co.uk>
  */
+
 namespace Axstrad\Bundle\ExtraFrameworkBundle\Request\ParamConverter;
 
 use Doctrine\Common\Persistence\ManagerRegistry;
@@ -20,13 +20,17 @@ use Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\DoctrineParamConve
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
 
-
 /**
  * Axstrad\Bundle\ExtraFrameworkBundle\Request\ParamConverter\DoctrineParamConverter
  *
  * Extends the standard DoctrineParamConverter so that the Doctrine Entity classname can be specified as a DI container
  * paramerter. Also if the Repository returns a PhpOption\Option object, it's value will be extracted and returned or a
  * NotFoundException will be thrown.
+ *
+ * @author Dan Kempster <dev@dankempster.co.uk>
+ * @license MIT
+ * @package Axstrad/ExtraFrameworkBundle
+ * @subpackage ParamConverter
  */
 class DoctrineParamConverter extends SensioDoctrineParamConverter
 {

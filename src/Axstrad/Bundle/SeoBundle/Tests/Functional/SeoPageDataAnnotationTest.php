@@ -1,10 +1,27 @@
 <?php
+/**
+ * This file is part of the Axstrad library.
+ *
+ * (c) Dan Kempster <dev@dankempster.co.uk>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @copyright 2014-2015 Dan Kempster <dev@dankempster.co.uk>
+ */
+
 namespace Axstrad\Bundle\SeoBundle\Tests\Functional;
 
 use Axstrad\Bundle\TestBundle\Functional\WebTestCase;
 
 new \Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter(array());
 
+/**
+ * @author Dan Kempster <dev@dankempster.co.uk>
+ * @license MIT
+ * @package Axstrad/SeoBundle
+ * @subpackage Tests
+ */
 class SeoPageDataAnnotationTest extends WebTestCase
 {
     /**
