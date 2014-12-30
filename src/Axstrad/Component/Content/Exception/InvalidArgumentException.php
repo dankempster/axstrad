@@ -25,8 +25,4 @@ use Axstrad\Common\Exception\InvalidArgumentException as BaseException;
 class InvalidArgumentException extends BaseException implements
     Exception
 {
-    public static function create()
-    {
-        return new self;
-    }
 }
