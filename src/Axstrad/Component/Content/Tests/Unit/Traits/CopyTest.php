@@ -10,19 +10,18 @@
  * @copyright 2014-2015 Dan Kempster <dev@dankempster.co.uk>
  */
 
-namespace Axstrad\Component\Content\Tests\Content\Traits;
+namespace Axstrad\Component\Content\Tests\Unit\Traits;
 
 use Axstrad\Component\Test\TestCase;
 
 /**
- * Axstrad\Component\Content\Tests\Content\Traits\CopyTest
+ * Axstrad\Component\Content\Tests\Unit\Traits\CopyTest
  *
  * @author Dan Kempster <dev@dankempster.co.uk>
  * @license MIT
  * @package Axstrad/Content
  * @subpackage Tests
- * @group unittests
- * @uses Axstrad\Component\Content\Traits\Copy
+ * @group unit
  */
 class CopyTest extends TestCase
 {
@@ -35,7 +34,8 @@ class CopyTest extends TestCase
      */
     public function testCopyIsNullToStart()
     {
-        $this->assertAttributeNull(
+        $this->assertAttributeEquals(
+            null,
             'copy',
             $this->fixture
         );
@@ -53,11 +53,12 @@ class CopyTest extends TestCase
     }
 
     /**
+     * @covers Axstrad\Component\Content\Traits\Copy::setCopy
      */
     public function testCanSetCopy()
     {
         $this->fixture->setCopy('Some more copy.');
-        $this->assertEquals(
+        $this->assertAttributeEquals(
             'Some more copy.',
             'copy',
             $this->fixture
@@ -66,8 +67,8 @@ class CopyTest extends TestCase
 
     /**
      * @covers Axstrad\Component\Content\Traits\Copy::getCopy
-     * @uses Axstrad\Component\Content\Traits\Copy::setCopy
      * @depends testCanSetCopy
+     * @uses Axstrad\Component\Content\Traits\Copy::setCopy
      */
     public function testGetCopyMethod2()
     {
@@ -79,7 +80,7 @@ class CopyTest extends TestCase
     }
 
     /**
-     * covers Axstrad\Component\Content\Traits\Copy::setCopy
+     * @covers Axstrad\Component\Content\Traits\Copy::setCopy
      */
     public function testSetCopyReturnsSelf()
     {
@@ -90,17 +91,19 @@ class CopyTest extends TestCase
     }
 
     /**
-     * covers Axstrad\Component\Content\Traits\Copy::setCopy
+     * @covers Axstrad\Component\Content\Traits\Copy::setCopy
      * @depends testCanSetCopy
      */
     public function testCopyIsTypeCastToString()
     {
         $this->fixture->setCopy(1.1);
-        $this->assertSame(
+        $this->assertAttributeEquals(
             '1.1',
-            $this->fixture->getCopy()
+            'copy',
+            $this->fixture
         );
     }
+
     /**
      * @covers Axstrad\Component\Content\Traits\Copy::setCopy
      * @depends testCanSetCopy
@@ -114,5 +117,14 @@ class CopyTest extends TestCase
             'copy',
             $this->fixture
         );
+    }
+
+    /**
+     * @expectedException Axstrad\Component\Content\Exception\InvalidArgumentException
+     * @covers Axstrad\Component\Content\Traits\Copy::setCopy
+     */
+    public function testSetCopyThrowsExceptionIfArgumentIsNotScalar()
+    {
+        $this->fixture->setCopy($this);
     }
 }

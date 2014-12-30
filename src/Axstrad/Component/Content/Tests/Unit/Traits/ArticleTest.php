@@ -10,21 +10,18 @@
  * @copyright 2014-2015 Dan Kempster <dev@dankempster.co.uk>
  */
 
-namespace Axstrad\Component\Content\Tests\Traits;
+namespace Axstrad\Component\Content\Tests\Unit\Traits;
 
 use Axstrad\Component\Test\TestCase;
 
-
 /**
- * Axstrad\Component\Content\Tests\Traits\ArticleTest
+ * Axstrad\Component\Content\Tests\Unit\Traits\ArticleTest
  *
  * @author Dan Kempster <dev@dankempster.co.uk>
  * @license MIT
  * @package Axstrad/Content
  * @subpackage Tests
- * @group unittests
- * @uses Axstrad\Component\Content\Traits\Article
- * @uses Axstrad\Component\Content\Traits\Copy
+ * @group unit
  */
 class ArticleTest extends TestCase
 {
@@ -34,26 +31,40 @@ class ArticleTest extends TestCase
     }
 
     /**
-     * covers Axstrad\Component\Content\Traits\Article::getHeading
-     * covers Axstrad\Component\Content\Traits\Article::setHeading
+     * @covers Axstrad\Component\Content\Traits\Article::setHeading
      */
     public function testCanSetHeading()
     {
         $this->fixture->setHeading('A New Heading.');
-        $this->assertEquals(
+        $this->assertAttributeEquals(
             'A New Heading.',
-            $this->fixture->getHeading()
+            'heading',
+            $this->fixture
         );
     }
 
     /**
-     * covers Axstrad\Component\Content\Traits\Article::setHeading
+     * @covers Axstrad\Component\Content\Traits\Article::setHeading
      */
     public function testSetHeadingReturnsSelf()
     {
         $this->assertSame(
             $this->fixture,
             $this->fixture->setHeading('')
+        );
+    }
+
+    /**
+     * @covers Axstrad\Component\Content\Traits\Article::getHeading
+     * @depends testCanSetHeading
+     * @uses Axstrad\Component\Content\Traits\Article::setHeading
+     */
+    public function testGetHeadingMethod()
+    {
+        $this->fixture->setHeading('A Another Heading.');
+        $this->assertSame(
+            'A Another Heading.',
+            $this->fixture->getHeading()
         );
     }
 }
