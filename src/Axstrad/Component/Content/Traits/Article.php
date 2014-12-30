@@ -22,9 +22,7 @@ namespace Axstrad\Component\Content\Traits;
  */
 trait Article
 {
-    use Copy {
-        Copy::setCopy as private _setCopy;
-    }
+    use Copy;
 
 
     /**
@@ -52,21 +50,5 @@ trait Article
     public function getHeading()
     {
         return $this->heading;
-    }
-
-    /**
-     * Set Copy
-     *
-     * @param string $copy
-     * @return self
-     */
-    public function setCopy($copy = null)
-    {
-        if ($copy === null) {
-            $this->copy = null;
-            return $this;
-        }
-
-        return $this->_setCopy($copy);
     }
 }
