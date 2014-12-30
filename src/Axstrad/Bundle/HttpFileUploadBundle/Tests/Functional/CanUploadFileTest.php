@@ -4,7 +4,6 @@ namespace Axstrad\Bundle\HttpFileUploadBundle\Tests\Functional;
 use Axstrad\Bundle\HttpFileUploadBundle\Model\File;
 use Axstrad\Bundle\HttpFileUploadBundle\Model\FileAware;
 use Axstrad\Bundle\TestBundle\Functional\WebTestCase;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\PropertyAccess\PropertyAccessor;
 
 

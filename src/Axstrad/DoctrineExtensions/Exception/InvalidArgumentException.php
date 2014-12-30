@@ -12,9 +12,12 @@
  */
 namespace Axstrad\DoctrineExtensions\Exception;
 
+use Axstrad\Common\Exception\InvalidArgumentException as BaseException;
+
+
 /**
  * Axstrad\DoctrineExtensions\Exception\InvalidArgumentException
  */
-class InvalidArgumentException extends \InvalidArgumentException
+class InvalidArgumentException extends BaseException
     implements Exception
 {}

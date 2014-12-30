@@ -8,7 +8,6 @@
  * file that was distributed with this source code.
  *
  * @author Dan Kempster <dev@dankempster.co.uk>
- * @package Axstrad\Bundle\ExtraFrameworkBundle
  */
 namespace Axstrad\Bundle\ExtraFrameworkBundle\DependencyInjection\Compiler;
 
@@ -19,6 +18,10 @@ use Symfony\Component\DependencyInjection\Reference;
 
 /**
  * Axstrad\Bundle\ExtraFrameworkBundle\DependencyInjection\Compiler\OverrideSensioDoctrineParamConverter
+ *
+ * @author Dan Kempster <dev@dankempster.co.uk>
+ * @license MIT
+ * @package Axstrad/ExtraFrameworkBundle
  */
 class OverrideSensioDoctrineParamConverter implements CompilerPassInterface
 {

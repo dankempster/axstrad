@@ -41,8 +41,8 @@ interface Activatable
     /**
      * Set active
      *
-     * @param  boolean $active=true
+     * @param  boolean $active Default is true.
      * @return Activatable Returns self for fluent interface
      */
-    public function setActive($active=true);
+    public function setActive($active = true);
 }

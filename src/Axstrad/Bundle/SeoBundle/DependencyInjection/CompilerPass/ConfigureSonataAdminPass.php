@@ -1,4 +1,15 @@
 <?php
+/**
+ * This file is part of the Axstrad library.
+ *
+ * (c) Dan Kempster <dev@dankempster.co.uk>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @copyright 2014-2015 Dan Kempster <dev@dankempster.co.uk>
+ */
+
 namespace Axstrad\Bundle\SeoBundle\DependencyInjection\CompilerPass;
 
 use Symfony\Component\Config\FileLocator;
@@ -12,6 +23,11 @@ use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
  *
  * Loads SymfonyCMF's SEO admin configure when ORM persistence is enabled.
  * The Seo bundle contains a bug which prevents it from doing this itself.
+ *
+ * @author Dan Kempster <dev@dankempster.co.uk>
+ * @license MIT
+ * @package Axstrad/SeoBundle
+ * @subpackage Admin
  */
 class ConfigureSonataAdminPass implements CompilerPassInterface
 {

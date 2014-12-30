@@ -104,6 +104,12 @@ axstrad_page:
     resource: '@AxstradPageBundle/Resources/config/routing.yml'
 ```
 
+## Admin
+The bundle has support for SonataAdmin baked in. During compilation PageBundle
+looks for SonataAdmin, if found it will configure everything for you. It does
+this by including Resources/config/admin.xml, so feel free to override part or
+all of it to fit your needs.
+
 ## Next
 The bundle comes with a basic template, so you'll probably want to override them.
 

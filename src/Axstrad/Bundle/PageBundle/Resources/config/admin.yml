@@ -1,0 +1,15 @@
+parameters:
+    axstrad_page.admin.page.class: Axstrad\Bundle\PageBundle\Admin\PageAdmin
+
+services:
+    axstrad_page.admin.page:
+        class: %axstrad_page.admin.page.class%
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Page" }
+        arguments:
+            - ~
+            - Axstrad\Bundle\PageBundle\Entity\Page
+            - ~
+        calls:
+            - [ setTranslationDomain, [AxstradPageBundle]]
+            - [ setObjectManager, [@doctrine.orm.entity_manager]]

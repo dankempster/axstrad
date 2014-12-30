@@ -7,19 +7,18 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @author Dan Kempster <dev@dankempster.co.uk>
- * @package Axstrad\Bundle\ExtraFrameworkBundle
+ * @copyright 2014-2015 Dan Kempster <dev@dankempster.co.uk>
  */
+
 namespace Axstrad\Bundle\ExtraFrameworkBundle\Request\ParamConverter;
 
 use Doctrine\Common\Persistence\ManagerRegistry;
 use PhpOption\Option as PhpOption;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ConfigurationInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter as ParamConverterConfig;
 use Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\DoctrineParamConverter as SensioDoctrineParamConverter;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-
 
 /**
  * Axstrad\Bundle\ExtraFrameworkBundle\Request\ParamConverter\DoctrineParamConverter
@@ -27,6 +26,11 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
  * Extends the standard DoctrineParamConverter so that the Doctrine Entity classname can be specified as a DI container
  * paramerter. Also if the Repository returns a PhpOption\Option object, it's value will be extracted and returned or a
  * NotFoundException will be thrown.
+ *
+ * @author Dan Kempster <dev@dankempster.co.uk>
+ * @license MIT
+ * @package Axstrad/ExtraFrameworkBundle
+ * @subpackage ParamConverter
  */
 class DoctrineParamConverter extends SensioDoctrineParamConverter
 {
@@ -54,36 +58,7 @@ class DoctrineParamConverter extends SensioDoctrineParamConverter
     {
         $this->convertClassParamToClassName($configuration);
 
-        if (parent::apply($request, $configuration)==true) {
-            // With the addition of the phpoption/phpoption package included as part of Symfony 2.2, it's possible that
-            // a PhpOption/Option object will be returned containing the result of the entity lookup. Especially if
-            // Axstrad\Doctrine\Orm\EntityManager is used.
-
-            // Fetch the return entity from the request - this is where parent::apply() puts it before returning a bool
-            $name = $configuration->getName();
-            $entity = $request->attributes->get($name);
-
-
-            if ($entity instanceof PhpOption) {
-                // Get the value from the PhpOption, if it has none then do one of two things
-                //  * if the param is optional, return false; Otherwise
-                //  * throw a NotFoundHttpException
-                $entity = $entity->getOrCall(function() use ($request, $configuration, $name) {
-                    $request->attributes->remove($name);
-
-                    if (!$configuration->isOptional()) {
-                        throw new NotFoundHttpException(sprintf('%s object not found.', $configuration->getClass()));
-                    }
-                    else return false;
-                });
-
-                // PhpOption has a value so set it to the request, overwriting the PhpOption
-                $request->attributes->set($name, $entity);
-            }
-
-            return true;
-        }
-        else return false;
+        return parent::apply($request, $configuration);
     }
 
     /**
@@ -107,6 +82,10 @@ class DoctrineParamConverter extends SensioDoctrineParamConverter
      */
     protected function convertClassParamToClassName(ConfigurationInterface $configuration)
     {
+        if (!$configuration instanceof ParamConverterConfig) {
+            return;
+        }
+
         if (preg_match('/^%(.*)%$/', $configuration->getClass(), $matches)) {
             $param = $this->container->getParameter($matches[1]);
             $configuration->setClass($param);

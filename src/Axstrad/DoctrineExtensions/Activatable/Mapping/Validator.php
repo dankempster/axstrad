@@ -14,7 +14,7 @@ namespace Axstrad\DoctrineExtensions\Activatable\Mapping;
 
 use Doctrine\Common\Persistence\Mapping\ClassMetadata;
 use Gedmo\Exception\InvalidMappingException;
-
+use Doctrine\ORM\Mapping\ClassMetadataInfo as OrmClassMetadata;
 
 /**
  * Axstrad\DoctrineExtensions\Activatable\Mapping\Validator
@@ -35,7 +35,9 @@ class Validator
 
     public static function validateField(ClassMetadata $meta, $field)
     {
-        if ($meta->isMappedSuperclass) {
+        if ($meta instanceof OrmClassMetadata &&
+            $meta->isMappedSuperclass
+        ) {
             return;
         }
 

@@ -1,7 +1,6 @@
 <?php
 namespace Axstrad\Bundle\HttpFileUploadBundle\Model;
 
-use Axstrad\Bundle\HttpFileUploadBundle\Exception\LogixException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 
@@ -19,7 +18,7 @@ class BaseFile implements
     /**
      * @var null|UploadedFile
      */
-    private $file;
+    protected $file;
 
 
     /**

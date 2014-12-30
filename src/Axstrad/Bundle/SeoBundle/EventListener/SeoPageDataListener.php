@@ -1,4 +1,15 @@
 <?php
+/**
+ * This file is part of the Axstrad library.
+ *
+ * (c) Dan Kempster <dev@dankempster.co.uk>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @copyright 2014-2015 Dan Kempster <dev@dankempster.co.uk>
+ */
+
 namespace Axstrad\Bundle\SeoBundle\EventListener;
 
 use Axstrad\Bundle\SeoBundle\Configuration\SeoPageData;
@@ -12,6 +23,10 @@ use Symfony\Component\HttpKernel\KernelEvents;
  * Handles the @SeoPageData annotation
  *
  * Axstrad\Bundle\SeoBundle\EventListener\SeoPageDataListener
+ *
+ * @author Dan Kempster <dev@dankempster.co.uk>
+ * @license MIT
+ * @package Axstrad/SeoBundle
  */
 class SeoPageDataListener implements EventSubscriberInterface
 {
@@ -65,8 +80,8 @@ class SeoPageDataListener implements EventSubscriberInterface
 
     /**
      * @param  SeoPageData $configuration
-     * @param  object $controller
-     * @param  Request $request
+     * @param  callable $controller
+     * @param  \Symfony\Component\HttpFoundation\Request $request
      * @return void
      */
     protected function identifySeoDataObject($configuration, $controller, $request)
