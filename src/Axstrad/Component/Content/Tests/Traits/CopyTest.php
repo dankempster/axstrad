@@ -32,14 +32,48 @@ class CopyTest extends TestCase
     }
 
     /**
-     * covers Axstrad\Component\Content\Traits\Copy::getCopy
-     * covers Axstrad\Component\Content\Traits\Copy::setCopy
+     */
+    public function testCopyIsNullToStart()
+    {
+        $this->assertAttributeNull(
+            'copy',
+            $this->fixture
+        );
+    }
+
+    /**
+     * @covers Axstrad\Component\Content\Traits\Copy::getCopy
+     * @depends testCopyIsNullToStart
+     */
+    public function testGetCopyMethod1()
+    {
+        $this->assertNull(
+            $this->fixture->getCopy()
+        );
+    }
+
+    /**
      */
     public function testCanSetCopy()
     {
         $this->fixture->setCopy('Some more copy.');
         $this->assertEquals(
             'Some more copy.',
+            'copy',
+            $this->fixture
+        );
+    }
+
+    /**
+     * @covers Axstrad\Component\Content\Traits\Copy::getCopy
+     * @uses Axstrad\Component\Content\Traits\Copy::setCopy
+     * @depends testCanSetCopy
+     */
+    public function testGetCopyMethod2()
+    {
+        $this->fixture->setCopy('My copy');
+        $this->assertEquals(
+            'My copy',
             $this->fixture->getCopy()
         );
     }
@@ -65,6 +99,20 @@ class CopyTest extends TestCase
         $this->assertSame(
             '1.1',
             $this->fixture->getCopy()
+        );
+    }
+    /**
+     * @covers Axstrad\Component\Content\Traits\Copy::setCopy
+     * @depends testCanSetCopy
+     */
+    public function testCopyCanBeSetToNull()
+    {
+        $this->fixture->setCopy('My Copy');
+        $this->fixture->setCopy(null);
+        $this->assertAttributeEquals(
+            null,
+            'copy',
+            $this->fixture
         );
     }
 }
