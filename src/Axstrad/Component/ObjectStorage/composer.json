@@ -1,9 +1,9 @@
 {
-    "name": "axstrad/iterator",
-    "description": "A collection of iterators",
-    "type": "component",
-    "keywords": ["collection", "object", "splobjectstorage"],
-    "license": "GPL-2.0",
+    "name": "axstrad/object-storage",
+    "description": "Classes for use with SplObjectStorage",
+    "type": "library",
+    "keywords": [],
+    "license": "MIT",
     "authors": [
         {
             "name": "Dan Kempster",
@@ -14,19 +14,32 @@
 
     "require": {
         "php": ">=5.4",
-        "axstrad/itertator": "dev-develop",
-        "doctrine/common-collections": "~2.0"
+        "axstrad/common": "0.1.*",
+        "doctrine/common": "^2.1.3"
+    },
+
+    "require-dev": {
+        "axstrad/test": "0.1.*",
+        "phpunit/phpunit": "~4.1"
     },
 
     "autoload": {
-        "psr-0": {
-            "Axstrad\\Component\\Iterator": ""
+        "psr-4": {
+            "Axstrad\\Component\\ObjectStorage\\": ""
         }
     },
 
     "minimum-stability": "dev",
+    "prefer-stable": true,
+
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev",
+            "dev-develop": "0.2.x-dev"
+        }
+    },
 
     "archive": {
-        "exclude": ["!vendor", "Tests", "phpunit.xml*"]
+        "exclude": ["!vendor", "Tests", "phpunit.xml*", ".gitignore", ".travis.yml"]
     }
 }
