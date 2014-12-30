@@ -12,7 +12,7 @@
 
 namespace Axstrad\Component\Iterator\Tests;
 
-use Axstrad\Component\Iterator\SplObjectStorageIterator;
+use Axstrad\Component\ObjectStorage\Iterator;
 use Axstrad\Component\Test\TestCase;
 use SplObjectStorage;
 use StdClass;
@@ -30,7 +30,7 @@ class SplObjectIteratorTest extends TestCase
         $this->testInfo = 'foo';
         $storage->attach($this->testObject, $this->testInfo);
 
-        $this->fixture = new SplObjectStorageIterator($storage);
+        $this->fixture = new Iterator($storage);
     }
 
     public function testDefaultValueIsObject()
@@ -55,7 +55,7 @@ class SplObjectIteratorTest extends TestCase
 
     public function testCanSetValueToInfo()
     {
-        $this->fixture->setValueFlags(SplObjectStorageIterator::VALUE_INFO);
+        $this->fixture->setExtractFlags(Iterator::EXTR_INFO);
         foreach ($this->fixture as $value) {
             $this->assertEquals(
                 $this->testInfo,
@@ -66,7 +66,7 @@ class SplObjectIteratorTest extends TestCase
 
     public function testCanSetValueToBoth()
     {
-        $this->fixture->setValueFlags(SplObjectStorageIterator::VALUE_BOTH);
+        $this->fixture->setExtractFlags(Iterator::EXTR_BOTH);
         foreach ($this->fixture as $value) {
             $this->assertEquals(
                 array(
@@ -93,6 +93,6 @@ class SplObjectIteratorTest extends TestCase
      */
     public function testSetValueKeysThrowsException()
     {
-        $this->fixture->setValueFlags('foo');
+        $this->fixture->setExtractFlags('foo');
     }
 }

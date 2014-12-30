@@ -10,16 +10,17 @@
  * @copyright 2014-2015 Dan Kempster <dev@dankempster.co.uk>
  */
 
-namespace Axstrad\Component\Iterator;
+namespace Axstrad\Component\ObjectStorage;
 
 use Axstrad\Component\Iterator\Exception\InvalidArgumentException;
+use Axstrad\Component\ObjectStorage\Exception\InvalidExtractFlagException;
+use OutOfBoundsException;
 use SeekableIterator;
 use SplObjectStorage;
-use OutOfBoundsException;
 
 
 /**
- * Axstrad\Component\Iterator\Iterator
+ * Axstrad\Component\ObjectStorage\Iterator
  *
  * An iterator to iterate SplObjectStorage objects with the ability to decide
  * how data is extract and present during iteratrion.
@@ -46,11 +47,11 @@ class Iterator implements
      *
      * @param SplObjectStorage $storage
      */
-    public function __construct(SplObjectStorage $storage, $extractFlags = self::EXTR_ENTRY)
+    public function __construct(SplObjectStorage $storage, $extractFlags = self::EXTR_OBJECT)
     {
         $this->storage = new SplObjectStorage;
         $this->storage->addAll($storage);
-        $this->setValueFlags($extractFlags);
+        $this->setExtractFlags($extractFlags);
     }
 
     /**
@@ -74,21 +75,26 @@ class Iterator implements
      */
     public function current()
     {
-        switch ($this->getValueFlags()) {
-            case self::VALUE_INFO:
+        switch ($this->extractFlags) {
+            case self::EXTR_INFO:
                 $return = $this->storage->getInfo();
                 break;
 
-            case self::VALUE_OBJECT:
+            case self::EXTR_OBJECT:
                 $return = $this->storage->current();
                 break;
 
-            case self::VALUE_BOTH:
+            case self::EXTR_BOTH:
                 $return = array(
                     'object' => $this->storage->current(),
                     'info' => $this->storage->getInfo(),
                 );
                 break;
+            default:
+                throw InvalidExtractFlagException::create(
+                    $this->extractFlags,
+                    $this
+                );
         }
         return $return;
     }

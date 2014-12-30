@@ -412,7 +412,7 @@ class ObjectCollectionTests extends TestCase
     public function testGetIterator()
     {
         $this->assertInstanceOf(
-            'Axstrad\Component\Iterator\SplObjectStorageIterator',
+            'Axstrad\Component\ObjectStorage\Iterator',
             $this->fixture->getIterator()
         );
     }

@@ -12,7 +12,7 @@
 
 namespace Axstrad\Component\Iterator\Tests;
 
-use Axstrad\Component\Iterator\SplObjectStorageIterator;
+use Axstrad\Component\ObjectStorage\Iterator;
 use Axstrad\Component\Test\TestCase;
 use SplObjectStorage;
 use StdClass;
@@ -33,8 +33,8 @@ class SplObjectStorageSeekableIteratorTest extends TestCase
         foreach ($objects as $key => $object) {
             $storage->attach($object, $key);
         }
-        $iterator = new SplObjectStorageIterator($storage);
-        $iterator->setValueFlags(SplObjectStorageIterator::VALUE_OBJECT);
+        $iterator = new Iterator($storage);
+        $iterator->setExtractFlags(Iterator::EXTR_OBJECT);
 
         // Test
         $iterator->seek($index);

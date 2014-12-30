@@ -16,7 +16,7 @@ namespace Axstrad\Component\ObjectStorage;
 use ArrayIterator;
 use Axstrad\Common\Util\Debug;
 use Axstrad\Component\ObjectStorage\Exception\InvalidArgumentException;
-use Axstrad\Component\Iterator\SplObjectStorageIterator;
+use Axstrad\Component\ObjectStorage\Iterator;
 use Closure;
 use Doctrine\Common\Collections\Criteria;
 use Doctrine\Common\Collections\Expr\ClosureExpressionVisitor;
@@ -497,7 +497,7 @@ class ObjectStorage extends SplObjectStorage implements
      */
     public function getIterator()
     {
-        return new SplObjectStorageIterator($this);
+        return new Iterator($this);
     }
 
     /**
