@@ -6,8 +6,6 @@ use Axstrad\DoctrineExtensions\Activatable\ActivatableEntity;
 use Axstrad\DoctrineExtensions\Mapping\Annotation as Axstrad;
 use Doctrine\ORM\Mapping as ORM;
 
-new Axstrad\Activatable(array());
-
 /**
  * @Axstrad\Activatable(fieldName="active")
  * @ORM\Entity

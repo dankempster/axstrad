@@ -6,8 +6,6 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Cmf\Bundle\SeoBundle\SeoAwareInterface;
 use Symfony\Cmf\Bundle\SeoBundle\SeoAwareTrait;
 
-new ORM\Entity;
-
 /**
  * Axstrad\Bundle\SeoBundle\Tests\Functonal\Entity\Article
  *

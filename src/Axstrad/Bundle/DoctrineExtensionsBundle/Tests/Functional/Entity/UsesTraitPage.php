@@ -6,11 +6,6 @@ use Axstrad\DoctrineExtensions\Activatable\ActivatableTrait;
 use Axstrad\DoctrineExtensions\Mapping\Annotation as Axstrad;
 use Doctrine\ORM\Mapping as ORM;
 
-new ORM\Column;
-new ORM\Entity;
-new ORM\GeneratedValue;
-new ORM\Id;
-
 /**
  * @Axstrad\Activatable(fieldName="active")
  * @ORM\Entity

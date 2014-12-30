@@ -6,10 +6,6 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Cmf\Bundle\SeoBundle\SeoAwareInterface;
 use Symfony\Cmf\Bundle\SeoBundle\SeoAwareTrait;
 
-new ORM\Entity;
-new ORM\OneToOne;
-new ORM\JoinColumn;
-
 /**
  * Axstrad\Bundle\SeoBundle\Tests\Functonal\Entity\Page
  *

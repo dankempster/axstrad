@@ -3,9 +3,6 @@ namespace Axstrad\Bundle\HttpFileUploadBundle\Tests\Functional\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-new ORM\Entity;
-new ORM\Column;
-
 /**
  * Axstrad\Bundle\HttpFileUploadBundle\Tests\Functional\Entity\Image
  *
