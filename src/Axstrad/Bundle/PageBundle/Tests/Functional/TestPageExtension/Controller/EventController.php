@@ -19,10 +19,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Cmf\Bundle\SeoBundle\Model\SeoMetadata;
 use Symfony\Component\HttpFoundation\Response;
 
-new ParamConverter(array());
-new SeoPageData(array());
-
-
 /**
  * Axstrad\Bundle\PageBundle\Tests\Functional\TestPageExtension\Controller\EventController
  *

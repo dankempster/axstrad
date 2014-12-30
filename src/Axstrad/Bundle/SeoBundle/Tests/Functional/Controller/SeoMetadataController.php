@@ -20,10 +20,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Cmf\Bundle\SeoBundle\Model\SeoMetadata;
 use Symfony\Component\HttpFoundation\Response;
 
-new Route(array());
-new ParamConverter(array());
-new SeoPageData(array());
-
 /**
  * Axstrad\Bundle\SeoBundle\Tests\Functional\Controller\SeoMetadataController
  *

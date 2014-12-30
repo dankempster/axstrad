@@ -20,10 +20,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
-new Route(array());
-new ParamConverter(array());
-new SeoPageData(array());
-
 /**
  * Axstrad\Bundle\SeoBundle\Tests\Functional\Controller\SeoDataAwareController
  *
