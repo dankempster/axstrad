@@ -1,0 +1,34 @@
+filter:
+    excluded_paths:
+        - src/Axstrad/Bridge/*/Tests/*
+        - src/Axstrad/Bundle/*/Tests/*
+        - src/Axstrad/Bundle/TestBundle/Functional/WebTestCase.php
+        - src/Axstrad/Common/Tests/*
+        - src/Axstrad/Component/*/Tests/*
+        - src/Axstrad/Component/Test/Example/*
+        - src/Axstrad/Component/Test/MockedIteratorTest.php
+        - src/Axstrad/DoctrineExtensions/Tests/*
+        - src/Axstrad/Symfony/*/Tests/*
+        - src/Axstrad/SymfonyBridge/*/Tests/*
+        - vendor/*
+tools:
+    external_code_coverage:
+        timeout: 1200
+        runs: 3
+    php_changetracking: true
+    php_mess_detector: true
+    php_code_sniffer:
+        config:
+            standard: PSR1
+    sensiolabs_security_checker: true
+    php_code_coverage: true
+    php_pdepend: true
+    php_loc:
+        enabled: true
+        excluded_dirs: [vendor, tests]
+    php_cpd:
+        enabled: true
+        excluded_dirs: [vendor, tests]
+    php_sim: true
+    php_cs_fixer: true
+    php_analyzer: true
