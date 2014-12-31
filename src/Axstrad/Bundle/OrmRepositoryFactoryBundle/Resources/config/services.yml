@@ -1,0 +1,16 @@
+parameters:
+    axstrad.orm_repository_factory.factory.class: Axstrad\Bundle\OrmRepositoryFactoryBundle\Factory\RepositoryFactory
+    axstrad.orm_repository_factory.service_ids: []
+    axstrad.orm_repository_factory.orm_factory.class: Doctrine\ORM\Repository\DefaultRepositoryFactory
+
+services:
+    axstrad.orm_repository_factory.orm_factory:
+        class: %axstrad.orm_repository_factory.orm_factory.class%
+
+    axstrad.orm_repository_factory.factory:
+        class: "%axstrad.orm_repository_factory.factory.class%"
+        arguments:
+            - "%axstrad.orm_repository_factory.service_ids%"
+            - '@service_container'
+            - '@axstrad.orm_repository_factory.orm_factory'
+

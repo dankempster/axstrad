@@ -1,0 +1,13 @@
+services:
+    axstrad.test_orm_repository_factory.some_service:
+        class: Axstrad\Bundle\OrmRepositoryFactoryBundle\Tests\Functional\Bundle\SomeService
+
+    axstrad.test_orm_repository_factory.repository.page:
+        class: Axstrad\Bundle\OrmRepositoryFactoryBundle\Tests\Functional\Bundle\Entity\PageRepository
+        tags:
+            -
+                name: axstrad.orm_repository
+                entity: Axstrad\Bundle\OrmRepositoryFactoryBundle\Tests\Functional\Bundle\Entity\Page
+        calls:
+            - [setSomeService, [@axstrad.test_orm_repository_factory.some_service]]
+
