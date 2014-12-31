@@ -1,7 +1,7 @@
 {
     "name": "axstrad/doctrine-extensions-bundle",
     "description": "Symfony 2 Bundle for Axstrad\\DoctrineExtensions",
-    "type": "library",
+    "type": "symfony-bundle",
     "keywords": ["doctrine", "extensions", "symfony bundle"],
     "license": "MIT",
     "authors": [
@@ -14,17 +14,38 @@
 
     "require": {
         "php": "~5.4",
-        "doctrine/dbal": ">=2.2.3,<2.4-dev",
-        "symfony/config": "~2.3",
-        "symfony/dependency-injection": "~2.3",
-        "symfony/http-kernel": "~2.3"
+        "axstrad/common": "0.1.*",
+        "axstrad/doctrine-extensions": "0.1.*",
+        "doctrine/doctrine-bundle": "~1",
+        "doctrine/orm": "2.3.*",
+        "symfony/symfony": "2.3.*"
+    },
+
+    "require-dev": {
+        "axstrad/test": "0.1.*",
+        "axstrad/test-bundle": "0.1.*",
+        "doctrine/doctrine-fixtures-bundle": "2.2.*",
+        "phpunit/phpunit": "~4.1",
+        "sensio/framework-extra-bundle": "~2.3 | ~3"
     },
 
     "autoload": {
-        "psr-0": {
-            "Axstrad\\DoctrineExtensionsBundle": ""
+        "psr-4": {
+            "Axstrad\\Bundle\\DoctrineExtensionsBundle\\": ""
         }
     },
 
-    "target-dir": "Axstrad/Bundle/DoctrineExtensionsBundle"
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev",
+            "dev-develop": "0.2.x-dev"
+        }
+    },
+
+    "archive": {
+        "exclude": ["!vendor", "Tests", "phpunit.xml*", ".gitignore", ".travis.yml"]
+    }
 }
