@@ -1,7 +1,7 @@
 {
     "name": "axstrad/extra-framework-bundle",
     "description": "Extra framework bundle for Symfony 2 applications",
-    "type": "library",
+    "type": "symfony-bundle",
     "keywords": ["symfony bundle"],
     "license": "MIT",
     "authors": [
@@ -16,17 +16,31 @@
         "php": ">=5.3.3",
         "doctrine/common": "~2.3",
         "phpoption/phpoption": "~1",
-        "sensio/framework-extra-bundle": "~2.3",
-        "symfony/dependency-injection": "~2.3",
-        "symfony/http-foundation": "~2.3",
-        "symfony/http-kernel": "~2.3"
+        "sensio/framework-extra-bundle": "~2.3 | ~3",
+        "symfony/symfony": "~2.3"
+    },
+
+    "require-dev": {
+        "phpunit/phpunit": "~4.1"
     },
 
     "autoload": {
         "psr-4": {
-            "Axstrad\\Bundle\\ExtraFrameworkBundle": "./"
+            "Axstrad\\Bundle\\ExtraFrameworkBundle\\": ""
         }
     },
 
-    "target-dir": "Axstrad/Bundle/ExtraFrameworkBundle"
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev",
+            "dev-develop": "0.2.x-dev"
+        }
+    },
+
+    "archive": {
+        "exclude": ["!vendor", "Tests", "phpunit.xml*", ".gitignore", ".travis.yml"]
+    }
 }

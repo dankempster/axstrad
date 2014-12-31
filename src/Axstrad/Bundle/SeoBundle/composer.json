@@ -1,8 +1,8 @@
 {
-    "name": "axstrad/doctrine-extensions-bundle",
-    "description": "Symfony 2 Bundle for Axstrad\\DoctrineExtensions",
+    "name": "axstrad/seo-bundle",
+    "description": "Adds Doctrine ORM support to Symfony-Cmf/SeoBundle",
     "type": "symfony-bundle",
-    "keywords": ["doctrine", "extensions", "symfony bundle"],
+    "keywords": ["axstrad", "seo"],
     "license": "MIT",
     "authors": [
         {
@@ -14,14 +14,13 @@
 
     "require": {
         "php": "~5.4",
-        "axstrad/common": "0.1.*",
-        "axstrad/doctrine-extensions": "0.1.*",
-        "doctrine/doctrine-bundle": "~1",
         "doctrine/orm": "2.3.*",
+        "symfony-cmf/seo-bundle": "~1.1",
         "symfony/symfony": "2.3.*"
     },
 
     "require-dev": {
+        "axstrad/content": "0.1.*",
         "axstrad/test": "0.1.*",
         "axstrad/test-bundle": "0.1.*",
         "doctrine/doctrine-fixtures-bundle": "2.2.*",
@@ -31,7 +30,7 @@
 
     "autoload": {
         "psr-4": {
-            "Axstrad\\Bundle\\DoctrineExtensionsBundle\\": ""
+            "Axstrad\\Bundle\\SeoBundle\\": ""
         }
     },
 
