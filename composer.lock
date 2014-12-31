@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a6b18591256e55a0b488db2b9b6ce808",
+    "hash": "c1a2106f77929d7deb973c83acdf4915",
     "packages": [
         {
             "name": "axstrad/common",
@@ -56,6 +56,213 @@
             "time": "2014-12-30 02:01:31"
         },
         {
+            "name": "axstrad/content",
+            "version": "v0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dankempster/axstrad-content.git",
+                "reference": "f7c5236a6c13a119a837c1336e077363e700aa70"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dankempster/axstrad-content/zipball/f7c5236a6c13a119a837c1336e077363e700aa70",
+                "reference": "f7c5236a6c13a119a837c1336e077363e700aa70",
+                "shasum": ""
+            },
+            "require": {
+                "axstrad/common": "0.1.*",
+                "doctrine/common": "~2.3",
+                "php": "~5.4"
+            },
+            "require-dev": {
+                "axstrad/test": "0.1.*",
+                "phpunit/phpunit": "~4.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev",
+                    "dev-develop": "0.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Axstrad\\Component\\Content\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dan Kempster",
+                    "email": "dev@dankempster.co.uk",
+                    "role": "Developer"
+                }
+            ],
+            "keywords": [
+                "axstrad",
+                "content"
+            ],
+            "time": "2014-12-30 22:14:57"
+        },
+        {
+            "name": "axstrad/doctrine-extensions",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dankempster/axstrad-doctrine-extensions.git",
+                "reference": "0bb82d9654e41c71b12a69081cc47b08e3b140fd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dankempster/axstrad-doctrine-extensions/zipball/0bb82d9654e41c71b12a69081cc47b08e3b140fd",
+                "reference": "0bb82d9654e41c71b12a69081cc47b08e3b140fd",
+                "shasum": ""
+            },
+            "require": {
+                "gedmo/doctrine-extensions": "~2.3",
+                "php": "~5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev",
+                    "dev-develop": "0.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Axstrad\\DoctrineExtensions\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dan Kempster",
+                    "email": "dev@dankempster.co.uk",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Extensions for Doctrine ORM",
+            "keywords": [
+                "axstrad",
+                "doctrine",
+                "extensions",
+                "orm"
+            ],
+            "time": "2014-12-30 23:29:51"
+        },
+        {
+            "name": "axstrad/filesystem",
+            "version": "v0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dankempster/axstrad-filesystem.git",
+                "reference": "6016356db5dea247efc48ffecdabb4385ec51561"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dankempster/axstrad-filesystem/zipball/6016356db5dea247efc48ffecdabb4385ec51561",
+                "reference": "6016356db5dea247efc48ffecdabb4385ec51561",
+                "shasum": ""
+            },
+            "require": {
+                "axstrad/common": "0.1.*",
+                "doctrine/collections": "1.0.*",
+                "php": ">=5.4",
+                "symfony/filesystem": "~2.0"
+            },
+            "require-dev": {
+                "axstrad/test": "0.1.*",
+                "mikey179/vfsstream": "~1.4",
+                "phpunit/phpunit": "~4.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev",
+                    "dev-develop": "0.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Axstrad\\Component\\Filesystem\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dan Kempster",
+                    "email": "dev@dankempster.co.uk",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Additional class for Symfony/Filesystem",
+            "keywords": [
+                "filesystem"
+            ],
+            "time": "2014-12-31 01:11:04"
+        },
+        {
+            "name": "axstrad/symfony-extra",
+            "version": "v0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dankempster/axstrad-symfony-extra.git",
+                "reference": "2431e47161d5a67690231a09943bcafd0cf0e32f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dankempster/axstrad-symfony-extra/zipball/2431e47161d5a67690231a09943bcafd0cf0e32f",
+                "reference": "2431e47161d5a67690231a09943bcafd0cf0e32f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "symfony/symfony": "~2.3"
+            },
+            "require-dev": {
+                "axstrad/test": "0.1.*",
+                "phpunit/phpunit": "~4.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev",
+                    "dev-develop": "0.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Axstrad\\Symfony\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dan Kempster",
+                    "email": "dev@dankempster.co.uk",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Convenience abstract class and traits when using Symonfy'scComponents",
+            "time": "2014-12-30 20:38:39"
+        },
+        {
             "name": "axstrad/test",
             "version": "v0.1.1",
             "source": {
@@ -100,6 +307,54 @@
             ],
             "description": "Test component used by all Axstrad packages.",
             "time": "2014-12-30 02:19:11"
+        },
+        {
+            "name": "axstrad/workforce",
+            "version": "v0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dankempster/axstrad-workforce.git",
+                "reference": "2470e5858a62317efca04eb15722c2a2190ca4c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dankempster/axstrad-workforce/zipball/2470e5858a62317efca04eb15722c2a2190ca4c0",
+                "reference": "2470e5858a62317efca04eb15722c2a2190ca4c0",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "~2.4",
+                "php": ">=5.4",
+                "phpoption/phpoption": "~1"
+            },
+            "require-dev": {
+                "axstrad/test": "0.1.*",
+                "phpunit/phpunit": "~4.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev",
+                    "dev-develop": "0.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Axstrad\\Component\\WorkForce\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dan Kempster",
+                    "email": "dev@dankempster.co.uk",
+                    "role": "Developer"
+                }
+            ],
+            "time": "2014-12-30 19:35:12"
         },
         {
             "name": "doctrine/annotations",
@@ -240,27 +495,22 @@
         },
         {
             "name": "doctrine/collections",
-            "version": "v1.2",
+            "version": "v1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "b99c5c46c87126201899afe88ec490a25eedd6a2"
+                "reference": "b1e6852b5e49e94ac818feca3b1a8689daefbffc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/b99c5c46c87126201899afe88ec490a25eedd6a2",
-                "reference": "b99c5c46c87126201899afe88ec490a25eedd6a2",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/b1e6852b5e49e94ac818feca3b1a8689daefbffc",
+                "reference": "b1e6852b5e49e94ac818feca3b1a8689daefbffc",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.2.x-dev"
-                }
-            },
             "autoload": {
                 "psr-0": {
                     "Doctrine\\Common\\Collections\\": "lib/"
@@ -304,7 +554,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2014-02-03 23:07:43"
+            "time": "2013-01-12 16:36:50"
         },
         {
             "name": "doctrine/common",
@@ -386,41 +636,31 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "v2.5.0",
+            "version": "2.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "71140662c0a954602e81271667b6e03d9f53ea34"
+                "reference": "d5067b0b7e5ef59ba165dcc116c539400bf957ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/71140662c0a954602e81271667b6e03d9f53ea34",
-                "reference": "71140662c0a954602e81271667b6e03d9f53ea34",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/d5067b0b7e5ef59ba165dcc116c539400bf957ff",
+                "reference": "d5067b0b7e5ef59ba165dcc116c539400bf957ff",
                 "shasum": ""
             },
             "require": {
-                "doctrine/common": ">=2.4,<2.6-dev",
+                "doctrine/common": ">=2.3.0,<2.5-dev",
                 "php": ">=5.3.2"
             },
-            "require-dev": {
-                "phpunit/phpunit": "4.*",
-                "symfony/console": "2.*"
-            },
-            "suggest": {
-                "symfony/console": "For helpful console commands such as SQL execution and import of files."
-            },
-            "bin": [
-                "bin/doctrine-dbal"
-            ],
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.5.x-dev"
+                    "dev-master": "2.3.x-dev"
                 }
             },
             "autoload": {
                 "psr-0": {
-                    "Doctrine\\DBAL\\": "lib/"
+                    "Doctrine\\DBAL": "lib/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -453,7 +693,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2014-12-04 21:57:15"
+            "time": "2014-09-15 11:44:29"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -739,28 +979,23 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "v2.4.7",
+            "version": "v2.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "2bc4ff3cab2ae297bcd05f2e619d42e6a7ca9e68"
+                "reference": "c2135b38216c6c8a410e764792aa368e946f2ae5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/2bc4ff3cab2ae297bcd05f2e619d42e6a7ca9e68",
-                "reference": "2bc4ff3cab2ae297bcd05f2e619d42e6a7ca9e68",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/c2135b38216c6c8a410e764792aa368e946f2ae5",
+                "reference": "c2135b38216c6c8a410e764792aa368e946f2ae5",
                 "shasum": ""
             },
             "require": {
-                "doctrine/collections": "~1.1",
-                "doctrine/dbal": "~2.4",
+                "doctrine/dbal": "2.3.*",
                 "ext-pdo": "*",
                 "php": ">=5.3.2",
-                "symfony/console": "~2.0"
-            },
-            "require-dev": {
-                "satooshi/php-coveralls": "dev-master",
-                "symfony/yaml": "~2.1"
+                "symfony/console": "2.*"
             },
             "suggest": {
                 "symfony/yaml": "If you want to use YAML Metadata Mapping Driver"
@@ -772,12 +1007,12 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4.x-dev"
+                    "dev-master": "2.3.x-dev"
                 }
             },
             "autoload": {
                 "psr-0": {
-                    "Doctrine\\ORM\\": "lib/"
+                    "Doctrine\\ORM": "lib/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -786,20 +1021,23 @@
             ],
             "authors": [
                 {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com",
+                    "homepage": "http://www.jwage.com/",
+                    "role": "Creator"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com",
+                    "homepage": "http://www.instaclick.com"
+                },
+                {
                     "name": "Roman Borschel",
                     "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Benjamin Eberlei",
                     "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
-                },
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com"
                 }
             ],
             "description": "Object-Relational-Mapper for PHP",
@@ -808,7 +1046,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2014-12-16 13:45:01"
+            "time": "2014-06-03 19:53:45"
         },
         {
             "name": "gedmo/doctrine-extensions",
@@ -3065,16 +3303,16 @@
         },
         {
             "name": "symfony/monolog-bundle",
-            "version": "v2.6.1",
+            "version": "v2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/MonologBundle.git",
-                "reference": "227bbeefe30f2d95e3fe5fbd1ccda414287a957a"
+                "reference": "e8f71c91a3784f3fa1a75fb1f7f4d4826c5f2773"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/MonologBundle/zipball/227bbeefe30f2d95e3fe5fbd1ccda414287a957a",
-                "reference": "227bbeefe30f2d95e3fe5fbd1ccda414287a957a",
+                "url": "https://api.github.com/repos/symfony/MonologBundle/zipball/e8f71c91a3784f3fa1a75fb1f7f4d4826c5f2773",
+                "reference": "e8f71c91a3784f3fa1a75fb1f7f4d4826c5f2773",
                 "shasum": ""
             },
             "require": {
@@ -3092,7 +3330,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6.x-dev"
+                    "dev-master": "2.7.x-dev"
                 }
             },
             "autoload": {
@@ -3120,12 +3358,13 @@
                 "log",
                 "logging"
             ],
-            "time": "2014-07-21 00:36:06"
+            "time": "2014-12-28 16:37:56"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "axstrad/doctrine-extensions": 20,
         "stof/doctrine-extensions-bundle": 20
     },
     "prefer-stable": false,
