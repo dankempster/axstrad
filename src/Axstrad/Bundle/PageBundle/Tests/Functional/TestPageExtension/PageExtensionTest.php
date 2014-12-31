@@ -47,6 +47,16 @@ class PageExtensionTest extends WebTestCase
         $this->response = $this->client->getResponse();
     }
 
+    public function testPageIsSuccessful()
+    {
+        $this->assertTrue(
+            $this->response->isSuccessful()
+        );
+    }
+
+    /**
+     * @depends testPageIsSuccessful
+     */
     public function testPageHasHeading()
     {
         $this->assertTrue(
@@ -54,6 +64,9 @@ class PageExtensionTest extends WebTestCase
         );
     }
 
+    /**
+     * @depends testPageIsSuccessful
+     */
     public function testPageHasCorrectHeadingValue()
     {
         $this->assertEquals(
@@ -62,6 +75,9 @@ class PageExtensionTest extends WebTestCase
         );
     }
 
+    /**
+     * @depends testPageIsSuccessful
+     */
     public function testPageHasCopy()
     {
         $this->assertEquals(
@@ -70,6 +86,9 @@ class PageExtensionTest extends WebTestCase
         );
     }
 
+    /**
+     * @depends testPageIsSuccessful
+     */
     public function testPageHasTitle()
     {
         $this->assertEquals(
@@ -78,6 +97,9 @@ class PageExtensionTest extends WebTestCase
         );
     }
 
+    /**
+     * @depends testPageIsSuccessful
+     */
     public function testPageHasMetaKeywords()
     {
         $this->assertEquals(
@@ -86,6 +108,9 @@ class PageExtensionTest extends WebTestCase
         );
     }
 
+    /**
+     * @depends testPageIsSuccessful
+     */
     public function testPageHasMetaDescription()
     {
         $this->assertEquals(

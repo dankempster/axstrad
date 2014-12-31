@@ -16,6 +16,7 @@ use Axstrad\DoctrineExtensions\Activatable\ActivatableTrait;
 use Axstrad\Component\Content\Orm\Article;
 use Axstrad\DoctrineExtensions\Sluggable\SluggableTrait;
 use Symfony\Cmf\Bundle\SeoBundle\SeoAwareTrait;
+use Symfony\Cmf\Bundle\SeoBundle\SeoAwareInterface;
 
 /**
  * Axstrad\Bundle\PageBundle\Entity\Page
@@ -25,7 +26,8 @@ use Symfony\Cmf\Bundle\SeoBundle\SeoAwareTrait;
  * @package Axstrad/PageBundle
  * @subpackage ORM
  */
-class Page extends Article
+class Page extends Article implements
+    SeoAwareInterface
 {
     use ActivatableTrait;
     use SeoAwareTrait;

@@ -23,6 +23,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @package Axstrad/PageBundle
  * @subpackage Tests
  * @ORM\Entity
+ * @ORM\Table(name="testPageExt_event")
  */
 class Event extends Page
 {
