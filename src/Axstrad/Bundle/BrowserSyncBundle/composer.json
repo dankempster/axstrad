@@ -1,0 +1,39 @@
+{
+    "name": "axstrad/browser-sync-bundle",
+    "description": "A Symfony 2 bundle for use with Browser-Sync",
+    "type": "symfony-bundle",
+    "keywords": ["symfony bundle", "browser-sync"],
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Dan Kempster",
+            "email": "dev@dankempster.co.uk",
+            "role": "Developer"
+        }
+    ],
+
+    "require": {
+        "php": ">=5.3.3"
+    },
+
+    "require-dev": {
+        "phpunit/phpunit": "~4.1"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Axstrad\\Bundle\\BrowserSyncBundle\\": ""
+        }
+    },
+
+    "archive": {
+        "exclude": [
+            ".gitignore",
+            ".scrutinizer.yml",
+            ".travis.yml",
+            "Tests",
+            "phpunit.xml*",
+            "vendor"
+        ]
+    }
+}
