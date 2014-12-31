@@ -7,7 +7,7 @@
          verbose="false">
 
     <testsuites>
-        <testsuite name="Axstrad\ExtraFrameworkBundle">
+        <testsuite name="Axstrad/ExtraFrameworkBundle">
             <directory suffix="Test.php">Tests/</directory>
         </testsuite>
     </testsuites>
@@ -15,7 +15,7 @@
     <logging>
         <!-- <log type="coverage-html"
              target="build/coverage"
-             title="Axstrad\ExtraFrameworkBundle"
+             title="Axstrad/ExtraFrameworkBundle"
              charset="UTF-8"
              yui="true"
              highlight="true"

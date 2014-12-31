@@ -13,7 +13,7 @@
     </php>
 
     <testsuites>
-        <testsuite name="Axstrad\PaheBundle">
+        <testsuite name="Axstrad/PageBundle">
             <directory suffix="Test.php">tests/</directory>
         </testsuite>
     </testsuites>
@@ -21,7 +21,7 @@
     <logging>
         <!-- <log type="coverage-html"
              target="build/coverage"
-             title="Axstrad Library"
+             title="Axstrad/PageBundle"
              charset="UTF-8"
              yui="true"
              highlight="true"
