@@ -72,12 +72,6 @@ doctrine:
                 dir: "%kernel.root_dir%/../../../../../../Component/Content/config/Orm"
                 alias: AxstradContent
                 is_bundle: false
-            axstrad_page:
-                type: yml
-                prefix: Axstrad\Component\Page\Entity
-                dir: "%kernel.root_dir%/../../../../../../Component/Page/config"
-                alias: AxstradPage
-                is_bundle: false
             CmfSeoBundle:
                 type: xml
                 prefix: Symfony\Cmf\Bundle\SeoBundle\Model
