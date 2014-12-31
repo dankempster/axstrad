@@ -58,6 +58,14 @@
             <file>./src/Axstrad/Common/Tests/Traits/NullableTitleTraitTest.php</file>
         </testsuite>
 
+        <testsuite name="Axstrad\Iterator">
+            <directory suffix="Test.php">./src/Axstrad/Component/Iterator/Tests/</directory>
+        </testsuite>
+
+        <testsuite name="Axstrad\Collection">
+            <directory suffix="Test.php">./src/Axstrad/Component/Collection/Tests/</directory>
+        </testsuite>
+
         <testsuite name="Axstrad\Filesystem">
             <directory suffix="Test.php">./src/Axstrad/Component/Filesystem/Tests/</directory>
         </testsuite>
