@@ -12,7 +12,7 @@ interface File
     /**
      * Returns the file's name
      *
-     * @return string
+     * @return self
      */
     public function setFile(UploadedFile $file = null);
 

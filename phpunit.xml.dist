@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<phpunit bootstrap="./vendor/autoload.php"
+<phpunit bootstrap="tests-bootstrap.php"
          backupGlobals="false"
          backupStaticAttributes="false"
          colors="true"
-         strict="true"
+         strict="false"
          verbose="false">
 
     <php>
@@ -35,6 +35,18 @@
             <directory suffix="Test.php">./src/Axstrad/Symfony/Finder/Tests</directory>
         </testsuite>
 
+        <testsuite name="Axstrad\Symfony\EventDispatcher">
+            <directory suffix="Test.php">./src/Axstrad/Symfony/EventDispatcher/Tests</directory>
+        </testsuite>
+
+        <testsuite name="Axstrad\Symfony\Finder">
+            <directory suffix="Test.php">./src/Axstrad/Symfony/Finder/Tests</directory>
+        </testsuite>
+
+        <testsuite name="Axstrad\Symfony\OptionsResolver">
+            <directory suffix="Test.php">./src/Axstrad/Symfony/OptionsResolver/Tests/</directory>
+        </testsuite>
+
         <testsuite name="Axstrad\Common">
             <directory suffix="Test.php">./src/Axstrad/Common/Tests/Exception</directory>
             <directory suffix="Test.php">./src/Axstrad/Common/Tests/Util</directory>
@@ -54,12 +66,28 @@
             <directory suffix="Test.php">./src/Axstrad/Component/OptionsResolver/Tests/</directory>
         </testsuite>
 
+        <testsuite name="Axstrad\WorkForce">
+            <directory suffix="Test.php">./src/Axstrad/Component/WorkForce/Tests</directory>
+        </testsuite>
+
+        <testsuite name="Axstrad\SymfonyBridge\WorkForce">
+            <directory suffix="Test.php">./src/Axstrad/SymfonyBridge/WorkForce/Tests</directory>
+        </testsuite>
+
+        <testsuite name="Axstrad\Filesystem">
+            <directory suffix="Test.php">./src/Axstrad/Component/Filesystem/Tests/</directory>
+        </testsuite>
+
         <testsuite name="Axstrad\Content">
             <directory suffix="Test.php">./src/Axstrad/Component/Content/Tests</directory>
         </testsuite>
 
         <testsuite name="Axstrad\DoctrineExtensions">
             <directory suffix="Test.php">./src/Axstrad/DoctrineExtensions/Tests/</directory>
+        </testsuite>
+
+        <testsuite name="Axstrad\Bridge\FilesystemWorker">
+            <directory suffix="Test.php">./src/Axstrad/Bridge/FilesystemWorker/Tests</directory>
         </testsuite>
 
         <testsuite name="Axstrad\TestBundle">
@@ -96,7 +124,7 @@
     </testsuites>
 
     <logging>
-        <log type="coverage-html"
+        <!-- <log type="coverage-html"
              target="build/coverage"
              title="Axstrad Library"
              charset="UTF-8"
@@ -104,9 +132,9 @@
              highlight="true"
              lowUpperBound="35"
              highLowerBound="70"
-        />
-        <log type="coverage-clover" target="build/logs/clover.xml"/>
-        <log type="junit" target="build/logs/junit.xml" logIncompleteSkipped="false"/>
+        /> -->
+        <!-- <log type="coverage-clover" target="build/logs/clover.xml"/> -->
+        <!-- <log type="junit" target="build/logs/junit.xml" logIncompleteSkipped="false"/> -->
     </logging>
 
     <filter>
@@ -118,6 +146,7 @@
                 <directory>./src/Axstrad/Component/*/Tests</directory>
                 <directory>./src/Axstrad/Component/Test/Example</directory>
                 <directory>./src/Axstrad/Symfony/*/Tests</directory>
+                <directory>./src/Axstrad/SymfonyBridge/*/Tests</directory>
                 <directory>./vendor</directory>
             </exclude>
         </whitelist>

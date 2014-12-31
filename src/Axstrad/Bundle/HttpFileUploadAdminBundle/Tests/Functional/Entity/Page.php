@@ -6,9 +6,6 @@ use Axstrad\Bundle\HttpFileUploadBundle\Model\FileAware;
 use Axstrad\Component\Content\Orm\Article;
 use Doctrine\ORM\Mapping as ORM;
 
-new ORM\Entity;
-new ORM\ManyToOne;
-
 /**
  * Axstrad\Bundle\HttpFileUploadAdminBundle\Tests\Functional\Entity\Page
  *

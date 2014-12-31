@@ -2,6 +2,7 @@
 namespace Axstrad\Bundle\HttpFileUploadBundle\Entity;
 
 use Axstrad\Bundle\HttpFileUploadBundle\Model\BaseFile;
+use DateTime;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 
@@ -19,7 +20,7 @@ class File extends BaseFile
     protected $id;
 
     /**
-     * @var Datetime
+     * @var DateTime
      */
     protected $fileUpdatedAt;
 
@@ -33,13 +34,13 @@ class File extends BaseFile
      *
      * @param null|string $format A format excepted by
      *        {@link http://www.php.net/manual/en/function.date.php date()}
-     * @return string|DateTime A DateTime object if  is NULL, a datetime string
-     *         otherwise.
+     * @return string|DateTime A DateTime object if $format is null, a datetime
+     *         string otherwise.
      * @see setFileUpdatedAt
      */
     public function getFileUpdatedAt($format = null)
     {
-        if ($this->fileUpdatedAt instanceof \DateTime) {
+        if ($this->fileUpdatedAt instanceof DateTime) {
             if (!empty($format)) {
                 return $this->fileUpdatedAt->format($format);
             }
@@ -66,11 +67,11 @@ class File extends BaseFile
         if ($fileUpdatedAt === null) {
             $this->fileUpdatedAt = null;
         }
-        elseif ($fileUpdatedAt instanceof \DateTime) {
+        elseif ($fileUpdatedAt instanceof DateTime) {
             $this->fileUpdatedAt = clone $fileUpdatedAt;
         }
         else {
-            $this->fileUpdatedAt = new \DateTime((string) $fileUpdatedAt);
+            $this->fileUpdatedAt = new DateTime((string) $fileUpdatedAt);
         }
         return $this;
     }

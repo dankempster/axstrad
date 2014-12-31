@@ -13,6 +13,13 @@
     ],
     "require": {
         "php": ">=5.4",
+        "axstrad/common": "0.1.*",
+        "axstrad/content": "0.1.*",
+        "axstrad/doctrine-extensions": "0.1.*@dev",
+        "axstrad/filesystem": "0.1.*",
+        "axstrad/symfony-extra": "0.1.*",
+        "axstrad/workforce": "0.1.*",
+        "axstrad/test": "0.1.*",
         "doctrine/common": "~2.3",
         "doctrine/doctrine-bundle": "~1",
         "doctrine/orm": "~2.3",
@@ -40,6 +47,10 @@
         "psr-0": {
             "Axstrad\\": "src/"
         }
+    },
+
+    "provide": {
+        "axstrad/browser-sync-bundle": "self.version"
     },
 
     "archive": {

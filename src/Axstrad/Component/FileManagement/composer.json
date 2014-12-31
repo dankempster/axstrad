@@ -1,0 +1,31 @@
+{
+    "name": "axstrad/file-repository",
+    "description": "",
+    "type": "component",
+    "keywords": ["filesystem", "file monitor", "file manager"],
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Dan Kempster",
+            "email": "dev@dankempster.co.uk",
+            "role": "Developer"
+        }
+    ],
+
+    "require": {
+        "php": ">=5.4",
+        "axstrad/filesystem": "dev-develop"
+    },
+
+    "autoload": {
+        "psr-0": {
+            "Axstrad\\Component\\FileManagement": ""
+        }
+    },
+
+    "minimum-stability": "dev",
+
+    "archive": {
+        "exclude": ["!vendor", "Tests", "phpunit.xml*"]
+    }
+}

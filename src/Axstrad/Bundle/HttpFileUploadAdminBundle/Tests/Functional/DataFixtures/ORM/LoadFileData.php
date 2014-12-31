@@ -5,7 +5,6 @@ use Axstrad\Bundle\HttpFileUploadBundle\Entity\File;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use org\bovigo\vfs\vfsStream;
-use Symfony\Cmf\Bundle\SeoBundle\Doctrine\Phpcr\SeoMetadata;
 
 /**
  * Axstrad\Bundle\HttpFileUploadBundle\Tests\Functional\DataFixtures\ORM\LoadFileData
